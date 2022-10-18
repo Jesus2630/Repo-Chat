@@ -11,4 +11,3 @@ una configuración global para todas las ramas. 🏝
 #Git merge para traer los archivos del master principal
 a nuestra rama
 
--git merge master  (Desde nuestra rama)
