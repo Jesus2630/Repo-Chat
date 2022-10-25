@@ -1,8 +1,14 @@
 const { Router } = require('express');
 const router = Router();
+const {db} = require('../models/firebase')
 
 
-router.get('/', (req,res) =>{
+router.get('/', async (req,res) =>{
+
+ const querySnapshot = await db.collection('usuario').get();
+ 
+   console.log(querySnapshot.docs[0].data());
+
     res.send('Soy el get')
 })
 
