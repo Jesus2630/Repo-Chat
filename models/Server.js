@@ -4,6 +4,8 @@ const exphbs  = require('express-handlebars');
 class Server{
     constructor(){
         this.app = express();
+        this.server = require('http').Server(this.app);
+        this.socketio = require('socket.io')(this.server);
         this.port = process.env.PORT;
         this.indexRoutes = require('../routes');
         
@@ -29,6 +31,7 @@ class Server{
 
     middlewares(){
         this.app.use(express.static('public'))
+        this.app.use(express.json())
     }
 
     routes(){
@@ -36,7 +39,7 @@ class Server{
     }
 
     listen(){
-        this.app.listen(this.port, () =>{
+        this.server.listen(this.port, () =>{
             console.log(`Servidor iniciado en el puerto ${this.port}`)
         })
     }
