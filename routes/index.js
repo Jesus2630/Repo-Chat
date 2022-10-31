@@ -7,11 +7,10 @@ router.get('/', async (req,res) =>{
 
  const querySnapshot = await db.collection('usuario').get();
  
-   //console.log(querySnapshot.docs[0].data());
 
    const usuario = querySnapshot.docs.map(doc=>({
     id: doc.id,
-    Nickname: doc.data().Nickname
+    ...doc.data()
    }))
 
    console.log(usuario)
