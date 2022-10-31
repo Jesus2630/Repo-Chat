@@ -28,6 +28,7 @@
   background-color: #7c4cc3;
   color: aliceblue;
   border-bottom: 1px solid rgb(61, 61, 61);
+  padding-top: 0.5rem;
 }
 .nav #antara {
   font-family: "Raleway", sans-serif;
@@ -85,8 +86,15 @@
   object-fit: cover;
   margin-bottom: 5px;
 }
-.user .user_up .user_pfp .status {
+.user .user_up .user_pfp .status-on {
   background-color: rgb(69, 173, 43);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+.user .user_up .user_pfp .status-off {
+  background-color: rgb(128, 14, 14);
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
@@ -112,7 +120,7 @@
   margin-left: 4px;
 }
 .chat-area .relleno {
-  padding-bottom: 27rem;
+  height: 40rem;
 }
 .chat-area .chat-enviar-mensaje {
   display: flex;

@@ -28,6 +28,7 @@
     background-color: #7c4cc3;
     color: aliceblue;
     border-bottom: 1px solid rgb(61, 61, 61);
+    padding-top: .5rem;
 
 
     #antara{
@@ -98,8 +99,16 @@
             margin-bottom: 5px;
         }
 
-        .status{
+        .status-on{
             background-color: rgb(69, 173, 43);
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+
+        }
+        .status-off{
+            background-color: rgb(128, 14, 14);
             border-radius: 50%;
             width: 1rem;
             height: 1rem;
