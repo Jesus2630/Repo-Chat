@@ -206,6 +206,17 @@
   box-shadow: none;
   resize: none;
 }
+.chat-area .chat-enviar-mensaje .mensaje_input {
+  width: 300px;
+  min-height: 17px;
+  border: 1px solid rgb(109, 31, 161);
+  max-height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.chat-area .chat-enviar-mensaje .mensaje_input:focus {
+  background-color: #7c4cc3;
+}
 .chat-area .chat-enviar-mensaje textarea:focus {
   border: none;
   overflow: auto;
@@ -214,15 +225,6 @@
   -moz-box-shadow: none;
   box-shadow: none;
   resize: none;
-}
-
-.mensaje_input {
-  width: 300px;
-  min-height: 17px;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .lista_de_usuarios {
