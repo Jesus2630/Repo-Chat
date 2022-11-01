@@ -120,7 +120,7 @@
   margin-left: 4px;
 }
 .chat-area .relleno {
-  height: 40rem;
+  padding-bottom: 27rem;
 }
 .chat-area .chat-enviar-mensaje {
   display: flex;
