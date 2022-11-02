@@ -1,3 +1,5 @@
+//registro de usuario con auth  firebase
+
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 import { auth } from "./firebaselogin.js";
 import { showMessage } from "./showmessage.js";
@@ -10,11 +12,13 @@ singupForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const email = singupForm["signup-email"].value;
   const pass = singupForm["signup-pass"].value;
+  
  
 
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
+      
       email,
       pass
     );
