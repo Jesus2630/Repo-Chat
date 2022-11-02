@@ -1,4 +1,4 @@
-require('dotenv').config();
+/*require('dotenv').config();
 
 const {initializeApp, applicationDefault} = require('firebase-admin/app');
 
@@ -14,4 +14,4 @@ const db = getFirestore();
 
 module.exports={
   db
-};
+};*/
