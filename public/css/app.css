@@ -19,6 +19,7 @@
  */
 .divisiones {
   display: flex;
+  height: 100%;
 }
 
 .nav {
@@ -38,6 +39,7 @@
 }
 .nav .titulo_nav {
   display: flex;
+  height: 100%;
 }
 .nav .parte_der_nav {
   display: flex;

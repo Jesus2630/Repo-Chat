@@ -18,8 +18,8 @@
 }
  */
 .divisiones{
-    display:flex
-
+    display:flex;
+    height: 100%;
 }
 
 .nav{    
@@ -41,6 +41,7 @@
 
     .titulo_nav{
         display: flex;
+        height: 100%;
     }
 
     .parte_der_nav{
