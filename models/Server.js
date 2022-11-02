@@ -1,6 +1,8 @@
 const express = require('express');
 const cors    = require('cors');
 const database = require('../db/config')
+const exphbs  = require('express-handlebars');
+
 
 class Server{
     constructor(){
@@ -17,6 +19,9 @@ class Server{
         //Conectar base de datos
         this.conectDB();
 
+        //Engine
+        this.engineHb();
+
         //Middelwares
         this.middlewares();
         
@@ -31,6 +36,16 @@ class Server{
         await database();
     }
 
+    engineHb(){
+        this.app.engine('.hbs', 
+            exphbs.engine({
+                extname: '.hbs',
+                defaultLayout: 'layout',
+            })
+        )
+        this.app.set('view engine', '.hbs');
+    }
+
     middlewares(){
         //Cors
         this.app.use(cors());
@@ -40,7 +55,7 @@ class Server{
     }
 
     routes(){
-        /* this.app.use(this.paths.chatRoutes, require('../routes/chatRoutes')); */
+        this.app.use(this.paths.chatRoutes, require('../routes/chatRoutes'));
     }
 
     sockets(){
