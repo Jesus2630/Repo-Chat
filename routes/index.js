@@ -1,10 +1,13 @@
 const { Router } = require('express');
 const router = Router();
-const {db} = require('../models/firebase')
+const { paginaInicio } = require('../controllers/homeControllers');
+
+//Home
+router.get('/', paginaInicio)
 
 
-router.get('/', async (req,res) =>{
 
+<<<<<<< HEAD
  const querySnapshot = await db.collection('usuario').get();
  
 
@@ -20,6 +23,9 @@ router.get('/', async (req,res) =>{
 router.post('/', (req,res) =>{
     res.send('Soy el post')
 })
+=======
+//Usuarios
+>>>>>>> 03907b159c78d1352d913ce350885c1afabfb1b4
 
 
 module.exports = router;

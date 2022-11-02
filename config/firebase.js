@@ -12,6 +12,8 @@ initializeApp({
 
 const db = getFirestore();
 
+console.log('Base de datos conectada.')
+
 module.exports={
   db
 };*/
