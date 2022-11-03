@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 html{
     scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Raleway', sans-serif;
-}
+} */
 
 .hero{
     background-image: linear-gradient(120deg, #ffb009 0%, #7c4cc3 100%), url("../img/header.jpg");
@@ -31,6 +31,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .Antara{
+        display: flex;
+
+        i{
+            font-size: 1.5rem;
+        }
+    }
 }
 .textos-hero h1{
     font-size: 60px;
@@ -202,9 +210,8 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
 
-.input{
+    .input{
     background: transparent;
     border: 0;
     color: #fff;
@@ -213,34 +220,37 @@ footer{
     padding: 20px 10px;
 }
 
-.input::placeholder{
-    color: #fff;
-    font-family: 'raleway', 'sans-serif';
+    .input::placeholder{
+        color: #fff;
+        font-family: 'raleway', 'sans-serif';
+    }
+
+    input[type="text"], 
+    input[type="email"]{
+        display: inline-block;
+        width: 49%;
+        margin-bottom: 30px;
+    }
+
+    .form textarea{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"]{
+        width: 120px;
+        text-align: center;
+        padding: 14px 0;
+    }
+
+    input[type="submit"]:hover{
+        cursor: pointer;
+        color: tomato;
+        background: #fff;
+    }
 }
 
-input[type="text"], 
-input[type="email"]{
-    display: inline-block;
-    width: 49%;
-    margin-bottom: 30px;
-}
 
-.form textarea{
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-input[type="submit"]{
-    width: 120px;
-    text-align: center;
-    padding: 14px 0;
-}
-
-input[type="submit"]:hover{
-    cursor: pointer;
-    color: tomato;
-    background: #fff;
-}
 @media screen and (max-width:800px){
     .textos-hero h1{
         text-align: center;
@@ -288,7 +298,7 @@ input[type="submit"]:hover{
     }
      /* last */
 
-     .last-section img{
+    .last-section img{
         width: 98%;
     }
 
