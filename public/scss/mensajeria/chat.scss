@@ -12,13 +12,14 @@
     box-sizing: border-box;
 }
 
-/* .todo{
-    background-color: #a29faf;
-}
- */
-.divisiones{
-    display:flex
 
+.todo{
+    width: 100%;
+}
+
+.divisiones{
+    display:flex;
+    height: 100%;
 }
 
 .nav{    
@@ -28,7 +29,7 @@
     background-color: #7c4cc3;
     color: aliceblue;
     border-bottom: 1px solid rgb(61, 61, 61);
-    padding-top: .5rem;
+    padding: 1rem;
 
 
     #antara{
@@ -42,7 +43,7 @@
         display: flex;
     }
 
-    .parte_izq_nav{
+    .parte_der_nav{
         display: flex;
 
         .usuarios_nav{
@@ -63,26 +64,59 @@
     color: aliceblue;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 22%;
+    min-height: 100%;
+    width: 28%;
+
+    .desplegable{
+        display: flex;
+        background-color: #110f13;
+        align-items: baseline;
+        padding: 0.3rem 0.5rem;
+    }
     
-    .chats{
+    .canales{
         display: flex;
         flex-direction: column;
 
+        .canal{
+            display: flex;
+            align-items: baseline;
+
+            i{
+                padding-left: 0.5rem;
+            }
+        }
+
+        .chat_privado{
+            .status_canal{
+                
+            }
+        }
+
         h6{
-    /*         margin-left: 0.5rem; */
-            background-color: #110f13;
-            padding: 0.5rem;
+            padding-left: 5px;
+            text-align: center;
+        }
+
+        i h6{
+            display: flex;
         }
 
         h8{
-            margin-left: 0.5rem;
+            padding: 0.3rem 0.5rem;
         }
 
+        .canal:hover{
+            background-color: #110f13;
+            cursor: pointer;
+        }
 
+        .chat_privado:hover{
+            background-color: #110f13;
+            cursor: pointer;
+        }
     }
-
+    
     .user_up{
         display: flex;
         align-items: center;
@@ -90,8 +124,10 @@
         margin-top: 2rem;
         margin-bottom: 1.5rem;
 
-        .user_pfp{
-            .user_pfp_img{
+        .contenedor_img{
+            position: relative;
+
+            .user_pfp{
             border-radius: 50%;
             width: 5rem;
             height: 5rem;
@@ -99,34 +135,56 @@
             margin-bottom: 5px;
         }
 
-        .status-on{
+        .status{
             background-color: rgb(69, 173, 43);
+            border: 2px solid #1a181d;
             border-radius: 50%;
-            width: 1rem;
-            height: 1rem;
+            width: 1.2rem;
+            height: 1.2rem;
             position: absolute;
+            right: 1px;
+        }
+        }
 
-        }
-        .status-off{
-            background-color: rgb(128, 14, 14);
-            border-radius: 50%;
-            width: 1rem;
-            height: 1rem;
-            position: absolute;
-
-        }
-        }
-        
+            
     }
-
 }
 
 
 .chat-area{
 
+    .canal_name{
+        display: flex;
+        align-items: center;    
+        border-bottom: 1px solid rgb(61, 61, 61);
+
+        i{
+            font-size: 1.9rem;
+        }
+    }
+/* ===== Scrollbar CSS ===== */
+        /* Chrome, Edge, and Safari */
+        .chat_estructura::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        .chat_estructura::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+
+        .chat_estructura::-webkit-scrollbar-thumb {
+            background-color: #7c4cc3;
+            border-radius: 10px;
+            border: 3px solid #ffffff;
+        }
+
     .chat_estructura{
         display: flex;
         flex-direction: column;
+        height: 75vh;
+        overflow-y: auto;
+
+        
 
         .mensaje{
             display: flex;
@@ -147,9 +205,6 @@
         }
     }
 
-    .relleno{
-            padding-bottom: 27rem;
-        }
 
     .chat-enviar-mensaje{
         display: flex; 
@@ -157,14 +212,38 @@
         align-items: baseline;
         border-top: 1px solid rgba(61, 61, 61, 0.137);
 
+
         h6{
-            margin-right: 15px;
+            margin-right: 10px;
+            margin-left: 5px;
         }
 
         i{
             font-size: 1.5rem;
         }
 
+        .emoji{
+            display: flex;
+            align-items: baseline;
+        }
+        form{
+            display: flex;
+
+        button, input[type="submit"], input[type="reset"] {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            }
+        }
+
+        .status_2{
+            background-color: rgb(69, 173, 43);
+            border-radius: 50%;
+            width: 0.5rem;
+            height: 0.5rem;
+        }
         textarea { 
             border: none; 
             overflow: auto; 
@@ -173,7 +252,21 @@
             -moz-box-shadow: none; 
             box-shadow: none; 
             resize: none; 
+        }        
+        
+        .mensaje_input{
+            width: 300px;
+            min-height: 17px;
+            border: 1px solid rgb(109, 31, 161);
+            max-height: 150px;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
+
+        .mensaje_input:focus{
+            background-color: #7c4cc3;
+        }
+
         textarea:focus { 
             border: none; 
             overflow: auto; 
@@ -186,6 +279,7 @@
     } 
 }
 
+        
 .lista_de_usuarios{
     display: flex;
     border-left: 1px solid rgba(61, 61, 61, 0.425);
