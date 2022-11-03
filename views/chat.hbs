@@ -4,7 +4,7 @@
                 <h1 id="antara">Antara</h1>
                 <i class='bx bxs-message-rounded-dots'></i>
         </div>
-        <div class="parte_izq_nav">
+        <div class="parte_der_nav">
             <div class="usuarios_nav"><i class='bx bxs-group'></i>
                 <h6>3</h6>
             </div>
@@ -14,10 +14,8 @@
     <div class="divisiones">
         <div class="user">
             <div class="user_up">
-                <div class="user_pfp">
-                    <img class="user_pfp_img" src="/img/kitty.PNG" alt="">
-                    <span class="status-on" id="status"></span></div>
-                <h5 id="usuario">Username</h5>
+                <div class="contenedor_img"><img class="user_pfp_img" src="./img/kitty.PNG" alt=""><span class="status-on" id="status"></span></div>
+                <h5 id="usuario">username</h5>
             </div>
 
             <div class="canales">
@@ -33,23 +31,23 @@
                 <span class="desplegable"><i class='bx bxs-chevron-down'></i>
                     <h6>Chats</h6>
                 </span>
-                <span class="chat_privado"><span class=" "></span>
+                <div class="chat_privado"><span class="status_canal"></span>
                     <h8>Lorem</h8>
-                </span>
-                <span class="chat_privado"><span class="status_canal"></span>
+                </div>
+                <div class="chat_privado"><span class="status_canal"></span>
                     <h8>Klaha</h8>
-                </span>
-                <span class="chat_privado"><span class="status_canal"></span>
+                </div>
+                <div class="chat_privado"><span class="status_canal"></span>
                     <h8>Mana</h8>
-                </span>
+                </div>
             </div>
         </div>
 
         <div class="chat-area w-75">
             <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
-
             </div>
             <div class="p-3">
+{{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
                 <form action="" class="row w-100 gap-3" id="formMensaje">
                     <div>
                         <input type="text" class="form-control w-100" id="cuadroMensaje">
@@ -60,7 +58,6 @@
                         </button>
                     </div>
                 </form>
-                <h6 class="text-center w-100 fs-4">Username</h6>
             </div>
         </div>
 
