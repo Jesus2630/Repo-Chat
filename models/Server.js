@@ -10,10 +10,7 @@ class Server{
         this.port = process.env.PORT;
         this.server = require('http').createServer(this.app);
         this.io = require('socket.io')(this.server);
-
-        this.paths={
-            chatRoutes : '/antara/chat'
-        }
+        this.indexRoutes = require('../routes');
 
 
         //Conectar base de datos
@@ -55,7 +52,7 @@ class Server{
     }
 
     routes(){
-        this.app.use(this.paths.chatRoutes, require('../routes/chatRoutes'));
+        this.app.use(this.indexRoutes)
     }
 
     sockets(){
