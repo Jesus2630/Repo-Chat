@@ -11,5 +11,4 @@ import'./singin.js'
 // funcion que veriffica la inicializacion
 onAuthStateChanged(auth, async(user)=>{
     console.log(user, "hola si  soy el usuario")
-
 })

@@ -2,14 +2,16 @@ const express = require('express');
 const cors    = require('cors');
 const database = require('../db/config')
 const exphbs  = require('express-handlebars');
+const socketio = require('socket.io');
 
+const Sockets = require('../sockets/sockets');
 
 class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
         this.server = require('http').createServer(this.app);
-        this.io = require('socket.io')(this.server);
+        this.io = socketio(this.server);
         this.indexRoutes = require('../routes');
 
 
@@ -55,21 +57,10 @@ class Server{
         this.app.use(this.indexRoutes)
     }
 
+
     sockets(){
-        this.io.on('connection', (socket)=>{
-            console.log('Cliente conectado')
-
-            socket.on('enviar-mensaje', (data)=>{
-            this.io.emit('mostrar-mensaje', data)
-            })
-
-            //Desconexión del cliente
-            socket.on('disconnect', ()=>{
-                console.log('Cliente desconectado', socket.id )
-            })
-
-        })
-        }
+        new Sockets( this.io );    
+    }
 
     listen(){
         this.server.listen(this.port, ()=>{
