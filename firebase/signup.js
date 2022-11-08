@@ -5,8 +5,9 @@ import { auth } from "./firebaselogin.js";
 import { showMessage } from "./showmessage.js";
 
 console.log("conectado");
+console.log(singupForm)
+const singupForm = document.querySelector("#form-register");
 
-const singupForm = document.querySelector("#formuser");
 
 singupForm.addEventListener("submit", async (e) => {
   e.preventDefault();

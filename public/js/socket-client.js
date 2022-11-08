@@ -5,7 +5,7 @@ const mensajeForm   = document.querySelector('#formMensaje');
 const modoStatus    = document.querySelector('#status')
 
 //Socket client
-const socket = io();
+/*const socket = io();
 
 socket.on('connect', ()=>{
     
@@ -44,4 +44,4 @@ socket.on('disconnect', ()=>{
 
     modoStatus.classList.remove('status-on')
     modoStatus.classList.add('status-off')
-})
+})*/
