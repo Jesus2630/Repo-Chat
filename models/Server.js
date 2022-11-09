@@ -3,6 +3,8 @@ const cors    = require('cors');
 const database = require('../db/config')
 const exphbs  = require('express-handlebars');
 
+const Sockets  = require('../sockets/sockets')
+
 
 class Server{
     constructor(){
@@ -56,20 +58,9 @@ class Server{
     }
 
     sockets(){
-        this.io.on('connection', (socket)=>{
-            console.log('Cliente conectado')
+        new Sockets( this.io );    
+    }
 
-            socket.on('enviar-mensaje', (data)=>{
-            this.io.emit('mostrar-mensaje', data)
-            })
-
-            //Desconexión del cliente
-            socket.on('disconnect', ()=>{
-                console.log('Cliente desconectado', socket.id )
-            })
-
-        })
-        }
 
     listen(){
         this.server.listen(this.port, ()=>{
