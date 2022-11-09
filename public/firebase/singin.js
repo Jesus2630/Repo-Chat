@@ -3,16 +3,16 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 import { auth } from "./firebaselogin.js";
 
-const singInForm = document.querySelector("#formuser2");
+const singInForm = document.querySelector("#form-login");
 
 singInForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = singinForm["signin-email"].value;
-  const pass = singinForm["signin-pass"].value;
+  const email = singInForm["signin-email"].value;
+  const pass = singInForm["signin-pass"].value;
 
   try {
-    const usercredentialsIn = await singInWithEmailAndPassword(
+    const usercredentialsIn = await signInWithEmailAndPassword(
       auth,
       email,
       pass

@@ -18,7 +18,9 @@ singInForm.addEventListener("submit", async (e) => {
       email,
       pass
     );
-    console.log(usercredentialsIn);
+    if (usercredentialsIn) {
+      window.location ="chat"
+    }
   } catch (error) {
     console.log("no hay usuario");
   }
