@@ -1,1 +1,1 @@
-import'./singin.js'
+import'../public/firebase/singin.js'
