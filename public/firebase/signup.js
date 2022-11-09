@@ -6,7 +6,7 @@ import { showMessage } from "./showmessage.js";
 
 console.log("conectado");
 
-const singupForm = document.querySelector("#formuser");
+const singupForm = document.querySelector("#form-register");
 
 singupForm.addEventListener("submit", async (e) => {
   e.preventDefault();

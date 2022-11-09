@@ -5,10 +5,6 @@ import { app } from "./firebaselogin.js";
 import { auth } from "./firebaselogin.js";
 
 
-import'./signup.js'
-
-import'./singin.js'
-
 // funcion que veriffica la inicializacion
 onAuthStateChanged(auth, async(user)=>{
     console.log(user, "hola si  soy el usuario")
