@@ -9,8 +9,8 @@ const singInForm = document.querySelector("#form-login");
 singInForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = singinForm["signin-email"].value;
-  const pass = singinForm["signin-pass"].value;
+  const email = singInForm["signin-email"].value;
+  const pass = singInForm["signin-pass"].value;
 
   try {
     const usercredentialsIn = await signInWithEmailAndPassword(
