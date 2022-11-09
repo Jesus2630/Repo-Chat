@@ -1,4 +1,4 @@
-//registro de usuario con auth  firebase
+//registro de usuario firebase
 
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 import { auth } from "./firebaselogin.js";
