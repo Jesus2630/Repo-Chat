@@ -13,17 +13,16 @@ singInForm.addEventListener("submit", async (e) => {
   const pass = singInForm["signin-pass"].value;
 
   try {
-    const usercredentialsIn = await signInWithEmailAndPassword(
+       const usercredentialsIn = await signInWithEmailAndPassword(
       auth,
       email,
       pass
     );
+    showMessage("haz iniciado sesion"+usercredentialsIn.user.email)
     if (usercredentialsIn) {
-      window.location ="chat"
+      window.location="chat"
     }
   } catch (error) {
     console.log("no hay usuario");
   }
-})
-
-
+});
