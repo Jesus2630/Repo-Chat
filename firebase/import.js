@@ -1,0 +1,1 @@
+import'../public/firebase/singin.js'
