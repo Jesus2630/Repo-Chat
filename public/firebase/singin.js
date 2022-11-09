@@ -18,6 +18,8 @@ singInForm.addEventListener("submit", async (e) => {
       email,
       pass
     );
+    showMessage("haz iniciado sesion " + usercredentialsIn.user.email)
+    setInterval(2000)
     if (usercredentialsIn) {
       window.location ="chat"
     }
