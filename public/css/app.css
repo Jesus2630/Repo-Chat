@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
-
-
 * {
   margin: 0;
   padding: 0;
@@ -811,7 +809,7 @@ a {
 }
 
 body {
-  background-color: #fff;
+  background-image: linear-gradient(120deg, #ffb009 15%, #7c4cc3 60%);
   font-family: "Open Sans", sans-serif;
   display: flex;
   align-items: center;
@@ -821,7 +819,7 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: rgb(255, 250, 255);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -855,7 +853,7 @@ body {
 }
 
 .form-control input {
-  border: 2px solid #f0f0f0;
+  border: 2px solid #fffcfc;
   border-radius: 4px;
   display: block;
   font-family: inherit;
@@ -872,8 +870,9 @@ body {
 }
 
 .form button {
-  background-color: #8e44ad;
-  border: 2px solid #8e44ad;
+  background-color: var(--image-bg);
+  background-color: #674da3;
+  border: 2px solid;
   border-radius: 4px;
   color: #fff;
   display: block;
@@ -882,6 +881,38 @@ body {
   padding: 10px;
   margin-top: 20px;
   width: 100%;
+}
+
+.sociales {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.sociales-materia {
+  width: 12.5rem;
+  height: 3.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  border: 1px solid var(--button-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sociales-materia img {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: relative;
+  top: 0;
+  left: -0.625rem;
+}
+
+.sociales-materia:hover {
+  background-color: rgb(143, 104, 175);
 }
 
 /*# sourceMappingURL=app.css.map */
