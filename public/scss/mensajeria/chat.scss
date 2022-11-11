@@ -1,9 +1,10 @@
 :root{
-    --amarillo: #080703;
+    --negro: #110f13;
     --violeta-claro: #7c4cc3;
     --violeta-muy-oscuro: #2a1554;
     --otro-violeta: #4f28cd;
     --último-violeta: #2d1688;
+    --rosita: #eeaeca;
 };
 
 *{
@@ -50,6 +51,7 @@
 
     .parte_der_nav{
         display: flex;
+        align-items: baseline;
 
         .usuarios_nav{
             display: flex;

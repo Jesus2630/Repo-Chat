@@ -18,6 +18,10 @@ html{
     .antara_nav{
         font-size: 2.5rem;
     }
+
+    p{
+        margin-left: 0.5rem;
+    }
     
     .acciones_nav{        
     font-family: var(--bs-body-font-family);
@@ -157,8 +161,9 @@ html{
     border-radius: 8px;
     color: #fff;
 }
+
 .info{
-    background:#4f28cd;
+    background: rgba(156,114,216,1);
     color: #fff;
 }
 
@@ -240,54 +245,26 @@ html{
 }
 /* footer */
 
-footer{
-    background:#f5576c;
+#footer{
+    background:#110f13;
     color: #fff;
-}
-
-.form{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 3rem;
 
-    .input{
-    background: transparent;
-    border: 0;
-    color: #fff;
-    outline: none;
-    border: 1px  solid #fff;
-    padding: 20px 10px;
-}
-
-    .input::placeholder{
-        color: #fff;
-        font-family: 'raleway', 'sans-serif';
+    h2{
+        font-size: 4rem;
     }
 
-    input[type="text"], 
-    input[type="email"]{
-        display: inline-block;
-        width: 49%;
-        margin-bottom: 30px;
-    }
-
-    .form textarea{
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    input[type="submit"]{
-        width: 120px;
-        text-align: center;
-        padding: 14px 0;
-    }
-
-    input[type="submit"]:hover{
-        cursor: pointer;
-        color: tomato;
-        background: #fff;
+    .chats_footer{
+        display: flex;
+        flex-direction: column;
     }
 }
+
+
+
 
 
 @media screen and (max-width:800px){
