@@ -7,16 +7,45 @@
   box-sizing: border-box;
 }
 
-/* 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Raleway', sans-serif;
-} */
+.nav_landing {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 1.3rem;
+  align-items: center;
+}
+.nav_landing .antara_nav {
+  font-size: 2.5rem;
+}
+.nav_landing .acciones_nav {
+  font-family: var(--bs-body-font-family);
+}
+.nav_landing .acciones_nav .login_nav {
+  font-family: var(--bs-body-font-family);
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+.nav_landing .acciones_nav .registro_nav {
+  font-family: var(--bs-body-font-family);
+  margin-left: 15px;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  padding: 5px 15px;
+  background-color: rgba(17, 15, 19, 0.5254901961);
+  text-decoration: none;
+  color: #fff;
+}
+
 .hero {
-  background-image: linear-gradient(120deg, #ffb009 0%, #7c4cc3 100%), url("../img/header.jpg");
+  background: rgb(253, 245, 207);
+  background: radial-gradient(circle, rgb(253, 245, 207) 0%, rgb(156, 114, 216) 100%);
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
@@ -29,7 +58,7 @@ body{
 
 .textos-hero {
   height: 500px;
-  color: #fff;
+  color: #2a1554;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +73,7 @@ body{
 
 .textos-hero h1 {
   font-size: 60px;
+  font-weight: 700;
 }
 
 .textos-hero p {
@@ -60,11 +90,14 @@ body{
   color: #fff;
 }
 
-.svg-hero {
+.imagengatito {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 160px;
+  left: 620px;
+  width: 78%;
+}
+.imagengatito img {
+  width: 78%;
 }
 
 /* Estilos generales */
@@ -74,7 +107,7 @@ body{
   max-width: 1000px;
   overflow: hidden;
   margin: auto;
-  padding: 0 0 80px 0;
+  padding: 0 0 50px 0;
 }
 
 .contenedor {
@@ -90,6 +123,7 @@ body{
 
 .titulo.left {
   text-align: left;
+  margin-top: 50px;
 }
 
 .titulo.right {
@@ -927,6 +961,15 @@ body {
 .nav .parte_der_nav .usuarios_nav h6 {
   padding-left: 5px;
   font-size: 1.4rem;
+}
+.nav .parte_der_nav .cerrar_sesion button {
+  background: none;
+  border: 0;
+  background-color: #c6b5ec;
+  padding: 12px;
+  color: #ffffff;
+  font-family: var(--bs-body-font-family);
+  border-radius: 10px;
 }
 
 .user {

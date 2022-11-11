@@ -61,6 +61,19 @@
                 font-size: 1.4rem;
             }
         }
+
+        .cerrar_sesion {
+            
+            button{
+            background: none;
+            border: 0;
+            background-color: #c6b5ec;
+            padding: 12px;
+            color: #ffffff;
+            font-family: var(--bs-body-font-family);
+            border-radius: 10px;
+            }
+        }
     }
 }
 
