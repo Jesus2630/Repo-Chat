@@ -11,6 +11,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #2c1454 #2c1454;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 14px;
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2c1454;
+  border-radius: 10px;
+  border: 3px solid #2c1454;
+}
+
 .nav_landing {
   color: #fff;
   display: flex;
@@ -48,7 +71,7 @@ html {
 
 .hero {
   background: rgb(253, 245, 207);
-  background: radial-gradient(circle, rgb(253, 245, 207) 0%, rgb(156, 114, 216) 100%);
+  background: radial-gradient(circle, #fdf5cf 0%, #eeaeca 25%, #9c72d8 100%);
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
@@ -91,16 +114,17 @@ html {
   background: #a18cd1;
   border-radius: 8px;
   color: #fff;
+  font-family: var(--bs-body-font-family);
 }
 
 .imagengatito {
   position: absolute;
   top: 160px;
-  left: 620px;
+  left: 650px;
   width: 78%;
 }
 .imagengatito img {
-  width: 78%;
+  width: 74%;
 }
 
 /* Estilos generales */
@@ -122,6 +146,14 @@ html {
   font-size: 35px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.titulo_reglamento {
+  font-weight: 300;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .titulo.left {
@@ -154,10 +186,11 @@ html {
 .cta {
   display: inline-block;
   text-decoration: none;
-  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  background-image: linear-gradient(45deg, rgb(156, 114, 216) 0%, #eeaeca 99%, rgb(253, 245, 207) 100%);
   padding: 12px 15px;
   border-radius: 8px;
   color: #fff;
+  font-family: var(--bs-body-font-family);
 }
 
 .info {
@@ -228,7 +261,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .last-section img {
@@ -912,6 +945,7 @@ a {
   height: 100%;
 }
 
+/* ---- nav y parte superior de la página ---- */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -957,6 +991,7 @@ a {
   border-radius: 10px;
 }
 
+/* ---- parte izq oscura de la página, user, mensajes, etc. ---- */
 .user {
   background-color: #1a181d;
   color: aliceblue;
@@ -1047,12 +1082,14 @@ a {
   right: 1px;
 }
 
+/* ---- area del chat ---- */
 .chat-area {
   /*     .p-3{
           display: flex;
       } */
   /* ===== Scrollbar CSS ===== */
   /* Chrome, Edge, and Safari */
+  /* #31234e */
 }
 .chat-area .canal_name {
   display: flex;
@@ -1155,7 +1192,46 @@ a {
   box-shadow: none;
   resize: none;
 }
+.chat-area .gap-2 {
+  gap: 0.5rem !important;
+  display: flex;
+  width: 100%;
+}
+.chat-area .area-mensaje {
+  width: 90%;
+}
+.chat-area .col {
+  flex: 1 0 0%;
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-area .area-emoji {
+  font-size: 1.6rem;
+  width: auto;
+  display: flex;
+}
+.chat-area button#btn-enviar {
+  width: auto;
+}
+@media screen and (max-width: 1920px) {
+  .chat-area .fs-5 {
+    font-size: 1.65rem;
+  }
+}
+.chat-area button {
+  border-radius: 5rem;
+  background-color: #7c4cc3;
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  padding: 8px 15px;
+  font-size: 1.6rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
+/* ---- usuarios conectados ----  */
 .lista_de_usuarios {
   display: flex;
   border-left: 1px solid rgba(61, 61, 61, 0.425);

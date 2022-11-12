@@ -23,6 +23,8 @@
     height: 100%;
 }
 
+/* ---- nav y parte superior de la página ---- */
+
 .nav{    
     display: flex;
     justify-content: space-between;
@@ -79,7 +81,7 @@
     }
 }
 
-
+/* ---- parte izq oscura de la página, user, mensajes, etc. ---- */
 
 .user{
     background-color: #1a181d;
@@ -189,6 +191,8 @@
 }
 
 
+/* ---- area del chat ---- */
+
 .chat-area{
     
 /*     .p-3{
@@ -268,6 +272,7 @@
             display: flex;
             align-items: baseline;
         }
+
         form{
             display: flex;
 
@@ -319,8 +324,56 @@
             resize: none; 
         }
     } 
+
+    .gap-2 {
+        gap: 0.5rem!important;
+        display: flex;
+        width: 100%;
+    }
+
+    .area-mensaje {
+        width: 90%;
+    }
+
+    .col {
+        flex: 1 0 0%;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .area-emoji{
+        font-size: 1.6rem;
+        width: auto;
+        display: flex;
+    }
+
+    button#btn-enviar {
+        width: auto;
+    }
+
+    //mensajes
+    @media screen and (max-width: 1920px){
+        .fs-5{
+            font-size: 1.65rem;
+        } 
+    }
+
+/* #31234e */
+    button{
+        border-radius: 5rem;
+        background-color: #7c4cc3;
+        color: #ffffff;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        padding: 8px 15px;
+        font-size: 1.6rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
 }
 
+/* ---- usuarios conectados ----  */
         
 .lista_de_usuarios{
     display: flex;

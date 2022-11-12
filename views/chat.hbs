@@ -1,7 +1,7 @@
 <div class="todo">
     <div class="nav">
         <div class="titulo_nav">
-                <h1 id="antara">Antara</h1>
+                <a href="/"><h1 id="antara">Antara</h1></a> {{!-- arreglar que se pisan los estilos de login en la etiqueta a --}}
                 <i class='bx bxs-message-rounded-dots'></i>
         </div>
         <div class="parte_der_nav">
@@ -49,15 +49,18 @@
         <div class="chat-area w-75">
             <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
             </div>
-            <div class="p-3">
+            <div class="p-3" style="display: flex;">
 {{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
-                <form action="" class="row w-100 gap-3" id="formMensaje">
-                    <div>
-                        <input type="text" class="form-control w-100" id="cuadroMensaje">
+                <form action="" class="gap-2" id="formMensaje">
+                    <div class="area-mensaje">
+                        <input type="text" class="form-control" id="cuadroMensaje">
                     </div>
-                    <div class="col w-100">
-                        <button id="btn-enviar" class="btn btn-primary">
-                            Enviar
+                    <div class="col">
+                        <div class="area-emoji">
+                            <i class='bx bx-smile'></i>
+                        </div>
+                        <button id="btn-enviar" class="boton_enviar">
+                            <i class='bx bx-send'></i>
                         </button>
                     </div>
                 </form>
