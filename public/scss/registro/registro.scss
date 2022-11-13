@@ -10,6 +10,11 @@
 	justify-content: center;
 	min-height: 100vh;
 	margin: 0;
+
+	.container{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
 .container {
@@ -38,13 +43,17 @@
 }
 
 .form-control {
-	padding-bottom: 20px;
+	margin-bottom: 10px;
 	position: relative;
 }
 
 .form-control label {
 	display: inline-block;
 	margin-bottom: 5px;
+}
+
+#username{
+	margin-bottom: 10px;
 }
 
 .form-control input {

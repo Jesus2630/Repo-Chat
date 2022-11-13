@@ -759,6 +759,10 @@ button, input, optgroup, select, textarea {
   min-height: 100vh;
   margin: 0;
 }
+.registro_todo .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 
 .container {
   background-color: rgb(255, 250, 255);
@@ -786,13 +790,17 @@ button, input, optgroup, select, textarea {
 }
 
 .form-control {
-  padding-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
 }
 
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
+}
+
+#username {
+  margin-bottom: 10px;
 }
 
 .form-control input {
@@ -1062,6 +1070,7 @@ button, input, optgroup, select, textarea {
   flex-direction: column;
   height: 83vh;
   overflow-y: auto;
+  position: relative;
 }
 .chat-area .chat_estructura .mensaje {
   display: flex;
@@ -1090,10 +1099,6 @@ button, input, optgroup, select, textarea {
 }
 .chat-area .chat-enviar-mensaje i {
   font-size: 1.5rem;
-}
-.chat-area .chat-enviar-mensaje .emoji {
-  display: flex;
-  align-items: baseline;
 }
 .chat-area .chat-enviar-mensaje form {
   display: flex;
@@ -1140,6 +1145,18 @@ button, input, optgroup, select, textarea {
   box-shadow: none;
   resize: none;
 }
+.chat-area .canal_name {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(61, 61, 61);
+  margin: 0 0.2rem;
+}
+.chat-area .canal_name i {
+  font-size: 1.9rem;
+}
+.chat-area .canal_name h3 {
+  margin-left: 0.2rem;
+}
 .chat-area .p-3 {
   padding: 1rem 1rem 0;
 }
@@ -1147,6 +1164,9 @@ button, input, optgroup, select, textarea {
   gap: 0.5rem !important;
   display: flex;
   width: 100%;
+}
+.chat-area .form-control-chat {
+  padding-bottom: 20px;
 }
 .chat-area .area-mensaje {
   width: 100%;
@@ -1162,6 +1182,24 @@ button, input, optgroup, select, textarea {
   width: auto;
   display: flex;
   align-items: center;
+}
+.chat-area .container_emojis {
+  position: absolute;
+  display: none;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
+  padding: 5px 10px;
+  top: 690px;
+  right: 190px;
+  background-color: white;
+}
+.chat-area .container_emojis span#emoji {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.chat-area .container_emojis.open_container_emojis {
+  display: grid;
 }
 .chat-area button#btn-enviar {
   width: auto;

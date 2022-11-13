@@ -47,13 +47,38 @@
         </div>
 
         <div class="chat-area w-75">
+            <div class="canal_name bg-light"><i class='bx bx-hash'></i><h3>general</h3></div>
             <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
             </div>
+            <div class="container_emojis">
+                <span id="emoji">😊</span>
+                <span id="emoji">😉</span>
+                <span id="emoji">😍</span>
+                <span id="emoji">🤪</span>
+                <span id="emoji">🤭</span>
+                <span id="emoji">😴​</span>
+                <span id="emoji">🥳​</span>
+                <span id="emoji">😎​</span>
+                <span id="emoji">😳​</span>
+                <span id="emoji">😢</span>
+                <span id="emoji">😭</span>
+                <span id="emoji">😤</span>
+                <span id="emoji">😡</span>
+                <span id="emoji">❤️</span>
+                <span id="emoji">🙈​</span>
+                <span id="emoji">👍​</span>
+                <span id="emoji">🙌​</span>
+                <span id="emoji">💪​</span>
+                <span id="emoji">👀​</span>
+                <span id="emoji">​​​​​​​​​​🔥</span>
+                <span id="emoji">​✨</span>
+                <span id="emoji">🎉</span>
+            </div>               
             <div class="div-area-mensaje" style="display: flex;margin: 0 1rem;">
 {{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
                 <form action="" class="gap-2" id="formMensaje">
                     <div class="area-mensaje">
-                        <input type="text" class="form-control" id="cuadroMensaje">
+                        <input type="text" class="form-control-chat" id="cuadroMensaje" placeholder="Enviar mensaje...">
                     </div>
                     <div class="col">
                         <div class="area-emoji">
@@ -84,6 +109,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <script src="/socket.io/socket.io.js"></script>

@@ -230,6 +230,7 @@
         flex-direction: column;
         height: 83vh;
         overflow-y: auto;
+        position: relative;
 
         
 
@@ -268,11 +269,6 @@
 
         i{
             font-size: 1.5rem;
-        }
-
-        .emoji{
-            display: flex;
-            align-items: baseline;
         }
 
         form{
@@ -327,6 +323,21 @@
         }
     } 
 
+    .canal_name{
+        display: flex;
+        align-items: center;    
+        border-bottom: 1px solid rgb(61, 61, 61);
+        margin: 0 0.2rem;
+
+        i{
+            font-size: 1.9rem;
+        }
+
+        h3{
+            margin-left: 0.2rem;
+        }
+    }
+
     .p-3{
         padding: 1rem 1rem 0;
     }
@@ -335,6 +346,10 @@
         gap: 0.5rem!important;
         display: flex;
         width: 100%;
+    }
+
+    .form-control-chat{
+        padding-bottom: 20px;
     }
 
     .area-mensaje {
@@ -354,6 +369,27 @@
         width: auto;
         display: flex;
         align-items: center;
+    }
+
+    .container_emojis{
+        position: absolute;
+        display: none;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
+        padding: 5px 10px;
+        top: 690px;
+        right: 190px;
+        background-color: white;
+
+        span#emoji{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        &.open_container_emojis{
+            display: grid;
+        }
     }
 
     button#btn-enviar {
