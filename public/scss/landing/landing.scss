@@ -124,10 +124,15 @@ html{
     top: 160px;
     left: 650px;
     width: 78%;
+    z-index: 1;
 
     img{
         width: 74%;
     }
+}
+
+#boton_registro{
+    z-index: 10;
 }
 /* Estilos generales */
 
@@ -140,7 +145,7 @@ html{
     padding: 0 0 50px 0;
 }
 .contenedor{
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .titulo{
@@ -297,10 +302,47 @@ html{
 }
 
 
+@media screen and (min-width:1900px){
 
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 930px;
+        width: 78%;
+    
 
+    .imagengatito img {
+        width: 64%;
+    }
+}}
+
+@media screen and (min-width:1700px){
+
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 850px;
+        width: 78%;
+    
+
+    .imagengatito img {
+        width: 64%;
+    }
+}
+}
 
 @media screen and (max-width:800px){
+
+    .imagengatito {
+        position: absolute;
+        top: 360px;
+        left: 430px;
+        width: 78%;
+
+    .imagengatito img {
+        width: 68%;
+    }
+
     .textos-hero h1{
         text-align: center;
         font-size: 50px;
@@ -381,4 +423,13 @@ html{
     .galeria-cont>img{
         width: 97%;
     }
+
+    .imagengatito img {
+        display: none;
+    }
+
+    .nav_landing p{
+        display: none;
+    } 
+}
 }

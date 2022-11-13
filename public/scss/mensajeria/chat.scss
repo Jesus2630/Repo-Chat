@@ -228,7 +228,7 @@
     .chat_estructura{
         display: flex;
         flex-direction: column;
-        height: 75vh;
+        height: 83vh;
         overflow-y: auto;
 
         
@@ -327,7 +327,7 @@
         }
     } 
 
-    .area-mensaje{
+    .p-3{
         padding: 1rem 1rem 0;
     }
 
@@ -338,7 +338,7 @@
     }
 
     .area-mensaje {
-        width: 90%;
+        width: 100%;
     }
 
     .col {
@@ -347,6 +347,7 @@
         gap: 0.5rem;
         align-items: center;
     }
+    
 
     .area-emoji{
         font-size: 2.4rem;
