@@ -503,28 +503,9 @@ button, input, optgroup, select, textarea {
   text-align: right !important;
 }
 
-a {
-  font-family: Poppins-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 [role=button], a, area, button, input, label, select, summary, textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
 }
 
 .container-login100-form-btn {
@@ -620,28 +601,9 @@ a {
   background-color: #3b5998;
 }
 
-a {
-  font-family: Poppins-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 [role=button], a, area, button, input, label, select, summary, textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
 }
 
 .fa {
@@ -673,28 +635,9 @@ a {
   background-color: #1da1f2;
 }
 
-a {
-  font-family: Poppins-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 [role=button], a, area, button, input, label, select, summary, textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
 }
 
 .fa {
@@ -726,28 +669,9 @@ a {
   background-color: #ea4335;
 }
 
-a {
-  font-family: Poppins-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 [role=button], a, area, button, input, label, select, summary, textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
 }
 
 .fa {
@@ -779,28 +703,9 @@ a {
   background-color: #ea4335;
 }
 
-a {
-  font-family: Poppins-Regular;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-  margin: 0;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 [role=button], a, area, button, input, label, select, summary, textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
 }
 
 .registro_todo {
@@ -968,6 +873,10 @@ a {
 .nav .titulo_nav i {
   font-size: 1.5rem;
 }
+.nav .titulo_nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .nav .parte_der_nav {
   display: flex;
   align-items: baseline;
@@ -1084,9 +993,6 @@ a {
 
 /* ---- area del chat ---- */
 .chat-area {
-  /*     .p-3{
-          display: flex;
-      } */
   /* ===== Scrollbar CSS ===== */
   /* Chrome, Edge, and Safari */
   /* #31234e */
@@ -1129,6 +1035,7 @@ a {
   font-size: 1rem;
   margin-bottom: 0;
   margin-left: 4px;
+  word-break: break-all;
 }
 .chat-area .chat-enviar-mensaje {
   display: flex;
@@ -1192,6 +1099,9 @@ a {
   box-shadow: none;
   resize: none;
 }
+.chat-area .area-mensaje {
+  padding: 1rem 1rem 0;
+}
 .chat-area .gap-2 {
   gap: 0.5rem !important;
   display: flex;
@@ -1204,11 +1114,13 @@ a {
   flex: 1 0 0%;
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 .chat-area .area-emoji {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   width: auto;
   display: flex;
+  align-items: center;
 }
 .chat-area button#btn-enviar {
   width: auto;

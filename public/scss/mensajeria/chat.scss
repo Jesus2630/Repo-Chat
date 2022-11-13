@@ -49,6 +49,11 @@
         i{
             font-size: 1.5rem;
         }
+
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
     }
 
     .parte_der_nav{
@@ -194,10 +199,6 @@
 /* ---- area del chat ---- */
 
 .chat-area{
-    
-/*     .p-3{
-        display: flex;
-    } */
 
     .canal_name{
         display: flex;
@@ -245,7 +246,8 @@
             p{
                 font-size: 1rem;
                 margin-bottom: 0;
-                margin-left: 4px
+                margin-left: 4px;
+                word-break: break-all;
             }
 
         }
@@ -325,6 +327,10 @@
         }
     } 
 
+    .area-mensaje{
+        padding: 1rem 1rem 0;
+    }
+
     .gap-2 {
         gap: 0.5rem!important;
         display: flex;
@@ -339,12 +345,14 @@
         flex: 1 0 0%;
         display: flex;
         gap: 0.5rem;
+        align-items: center;
     }
 
     .area-emoji{
-        font-size: 1.6rem;
+        font-size: 2.4rem;
         width: auto;
         display: flex;
+        align-items: center;
     }
 
     button#btn-enviar {
