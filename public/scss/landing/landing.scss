@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 html{
     scroll-behavior: smooth;
@@ -204,43 +200,14 @@ footer{
     justify-content: space-between;
 }
 
-.input{
-    background: transparent;
-    border: 0;
-    color: #fff;
-    outline: none;
-    border: 1px  solid #fff;
-    padding: 20px 10px;
-}
 
-.input::placeholder{
-    color: #fff;
-    font-family: 'raleway', 'sans-serif';
-}
-
-input[type="text"], 
-input[type="email"]{
-    display: inline-block;
-    width: 49%;
-    margin-bottom: 30px;
-}
 
 .form textarea{
     width: 100%;
     margin-bottom: 15px;
 }
 
-input[type="submit"]{
-    width: 120px;
-    text-align: center;
-    padding: 14px 0;
-}
 
-input[type="submit"]:hover{
-    cursor: pointer;
-    color: tomato;
-    background: #fff;
-}
 @media screen and (max-width:800px){
     .textos-hero h1{
         text-align: center;
