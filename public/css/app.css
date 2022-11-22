@@ -35,6 +35,10 @@ html {
   border: 3px solid #2c1454;
 }
 
+.bg-landing {
+  background-color: #fff;
+}
+
 .nav_landing {
   color: #fff;
   display: flex;
@@ -141,8 +145,6 @@ html {
   overflow: hidden;
   margin: auto;
   padding: 0 0 50px 0;
-  display: flex;
-  align-items: center;
 }
 
 .contenedor {
