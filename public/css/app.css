@@ -44,6 +44,7 @@ html {
 }
 .nav_landing .antara_nav {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 .nav_landing p {
   margin-left: 0.5rem;
@@ -177,7 +178,8 @@ html {
 }
 
 .website img {
-  width: 48%;
+  height: 15%;
+  padding-top: 50px;
 }
 
 .website .contenedor-textos-main {
@@ -407,6 +409,9 @@ html {
 body {
   height: 100vh;
   font-family: "Poppins", sans-serif;
+}
+
+.login_todo {
   background-image: linear-gradient(120deg, rgb(253, 245, 207) 15%, rgb(156, 114, 216) 60%);
 }
 

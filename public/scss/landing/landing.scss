@@ -39,6 +39,7 @@ html{
 
     .antara_nav{
         font-size: 2.5rem;
+        font-weight: 600; 
     }
 
     p{
@@ -66,7 +67,6 @@ html{
             text-decoration: none;
             color: #fff
         }
-
     }
 }
 
@@ -178,7 +178,8 @@ html{
 }
 
 .website img{
-    width: 48%;
+    height: 15%;
+    padding-top: 50px;
 }
 
 .website .contenedor-textos-main{
