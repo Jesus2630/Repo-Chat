@@ -817,6 +817,7 @@ body {
 .divisiones {
   display: flex;
   height: 100%;
+  background-color: #ffffff;
 }
 
 /* ---- nav y parte superior de la página ---- */
@@ -883,7 +884,10 @@ body {
   display: flex;
   background-color: #110f13;
   align-items: baseline;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+}
+.user .desplegable h6 {
+  margin-bottom: 0;
 }
 .user .canales {
   display: flex;
@@ -988,7 +992,7 @@ body {
 .chat-area .chat_estructura {
   display: flex;
   flex-direction: column;
-  height: 83vh;
+  height: 80vh;
   overflow-y: auto;
   position: relative;
 }
@@ -1069,13 +1073,14 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(61, 61, 61);
-  margin: 0 0.2rem;
+  padding: 0 0.2rem;
 }
 .chat-area .canal_name i {
   font-size: 1.9rem;
 }
 .chat-area .canal_name h3 {
   margin-left: 0.2rem;
+  padding: 0.2rem 0;
 }
 .chat-area .p-3 {
   padding: 1rem 1rem 0;
@@ -1087,6 +1092,9 @@ body {
 }
 .chat-area .form-control-chat {
   padding-bottom: 20px;
+  width: 100%;
+  border: 0;
+  outline: 0;
 }
 .chat-area .area-mensaje {
   width: 100%;
@@ -1147,7 +1155,7 @@ body {
   display: flex;
   border-left: 1px solid rgba(61, 61, 61, 0.425);
   flex-direction: column;
-  margin-top: 10px;
+  padding-top: 10px;
   /*     width: 18%; */
 }
 .lista_de_usuarios .users_online h4 {
