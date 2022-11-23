@@ -1,8 +1,8 @@
 //iniciar sesion de usuario con firebase
 
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
-import { auth } from "../../firebase/firebaselogin.js";
-import { showMessage } from "../../firebase/showmessage.js";
+import { auth } from "./firebaselogin.js";
+import { showMessage } from "./showmessage.js";
 
 const singInForm = document.querySelector("#form-login");
 
@@ -18,6 +18,8 @@ singInForm.addEventListener("submit", async (e) => {
       email,
       pass
     );
+    showMessage("haz iniciado sesion " + usercredentialsIn.user.email)
+    setInterval(2000)
     if (usercredentialsIn) {
       window.location ="chat"
     }

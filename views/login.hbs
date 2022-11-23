@@ -1,7 +1,7 @@
 <div class="limites">
         <div class="container-login100">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                <form class="login100-form validate-form" id="form-login" >
+                <form class="login100-form validate-form" id="form-login" method="post" action="/login">
                 <span class="login100-form-title p-b-49">LOGIN</span>
                 <div class="wrap-input100 validate-input m-b-23" data-validate="Nombre de Usuario">
                     <span class="label-input100">Usuario</span>
@@ -31,7 +31,7 @@
                     <span>Registrate tambien por</span>
                 </div>
                <div class="flex-c-m">
-                <a href="#" class="login100-social-item bg1">
+                <a href="#" class="login100-social-item bg1 btn-info" id="facebook-firebase">
                     <i class="fa fa-facebook">
 
                     </i>
@@ -41,7 +41,7 @@
 
                     </i>
                 </a>
-                <a href="#" class="login100-social-item bg3">
+                <a href="#" class="login100-social-item bg3 btn-info" id="email-google">
                     <i class="fa fa-google">
 
                     </i>
@@ -54,6 +54,7 @@
         </div>
     </div>
 
-    <script src="../firebase/singin.js" type="module"></script>
+    <script src="./firebase/singin.js" type="module"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-     <script src="../firebase/login.js" type="module"></script>
+    <script src="./firebase/emailFbLogin.js" type="module"></script>
+    <script src="./firebase/facebookfbLogin.js" type="module"></script>
