@@ -50,7 +50,7 @@
             <div class="canal_name bg-light"><i class='bx bx-hash'></i><h3>general</h3></div>
             <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
             </div>
-            <div class="container_emojis">
+            <div class="container_emojis" id="container_emojis">
                 <span id="emoji">😊</span>
                 <span id="emoji">😉</span>
                 <span id="emoji">😍</span>
@@ -74,6 +74,12 @@
                 <span id="emoji">​✨</span>
                 <span id="emoji">🎉</span>
             </div>               
+            <div class="container_stickers" id="container_stickers">
+                <span id="sticker"><img src="./img/cute.gif" alt=""></span>
+                <span id="sticker"><img src="./img/cute2.gif" alt=""></span>
+                <span id="sticker"><img src="./img/cute3.png" alt=""></span>
+                <span id="sticker"><img src="./img/cute4.gif" alt=""></span>
+            </div>  
             <div class="div-area-mensaje" style="display: flex;margin: 0 1rem;padding: 0 0 0.2rem 0">
 {{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
                 <form action="" class="gap-2" id="formMensaje">
@@ -81,7 +87,7 @@
                         <input type="text" class="form-control-chat" id="cuadroMensaje" placeholder="Enviar mensaje...">
                     </div>
                     <div class="col">
-                        <div class="area-emoji">
+                        <div class="area-emoji" id="botonEmoji">
                             <i class='bx bx-smile'></i>
                         </div>
                         <button id="btn-enviar" class="boton_enviar">
@@ -114,3 +120,4 @@
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/socket-client.js"></script>
+<script src="/js/emojis.js"></script>
