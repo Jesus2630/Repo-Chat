@@ -1,12 +1,15 @@
 <div class="todo">
     <div class="nav">
         <div class="titulo_nav">
-                <h1 id="antara">Antara</h1>
+                <a href="/"><h1 id="antara">Antara</h1></a> {{!-- arreglar que se pisan los estilos de login en la etiqueta a --}}
                 <i class='bx bxs-message-rounded-dots'></i>
         </div>
         <div class="parte_der_nav">
             <div class="usuarios_nav"><i class='bx bxs-group'></i>
                 <h6>3</h6>
+            </div>
+            <div class="cerrar_sesion">
+                <button>Cerrar sesión</button>
             </div>
             <!--         <i class='bx bx-cog'></i> -->
         </div>
@@ -44,17 +47,45 @@
         </div>
 
         <div class="chat-area w-75">
+            <div class="canal_name bg-light"><i class='bx bx-hash'></i><h3>general</h3></div>
             <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
             </div>
-            <div class="p-3">
+            <div class="container_emojis">
+                <span id="emoji">😊</span>
+                <span id="emoji">😉</span>
+                <span id="emoji">😍</span>
+                <span id="emoji">🤪</span>
+                <span id="emoji">🤭</span>
+                <span id="emoji">😴​</span>
+                <span id="emoji">🥳​</span>
+                <span id="emoji">😎​</span>
+                <span id="emoji">😳​</span>
+                <span id="emoji">😢</span>
+                <span id="emoji">😭</span>
+                <span id="emoji">😤</span>
+                <span id="emoji">😡</span>
+                <span id="emoji">❤️</span>
+                <span id="emoji">🙈​</span>
+                <span id="emoji">👍​</span>
+                <span id="emoji">🙌​</span>
+                <span id="emoji">💪​</span>
+                <span id="emoji">👀​</span>
+                <span id="emoji">​​​​​​​​​​🔥</span>
+                <span id="emoji">​✨</span>
+                <span id="emoji">🎉</span>
+            </div>               
+            <div class="div-area-mensaje" style="display: flex;margin: 0 1rem;padding: 0 0 0.2rem 0">
 {{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
-                <form action="" class="row w-100 gap-3" id="formMensaje">
-                    <div>
-                        <input type="text" class="form-control w-100" id="cuadroMensaje">
+                <form action="" class="gap-2" id="formMensaje">
+                    <div class="area-mensaje">
+                        <input type="text" class="form-control-chat" id="cuadroMensaje" placeholder="Enviar mensaje...">
                     </div>
-                    <div class="col w-100">
-                        <button id="btn-enviar" class="btn btn-primary">
-                            Enviar
+                    <div class="col">
+                        <div class="area-emoji">
+                            <i class='bx bx-smile'></i>
+                        </div>
+                        <button id="btn-enviar" class="boton_enviar">
+                            <i class='bx bx-send'></i>
                         </button>
                     </div>
                 </form>
@@ -78,6 +109,8 @@
             </div>
         </div>
     </div>
+
 </div>
- <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/socket-client.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket-client.js"></script>

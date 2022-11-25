@@ -3,7 +3,9 @@
 const {request,response} = require('express')
 
 const loginController = (req=request, res=response)=>{
-    res.render('login')
+    res.render('login', {
+        titulo: 'Inicio de sesión'
+    })
 }
 
 const resdirectChat = (req=request, res=response)=>{

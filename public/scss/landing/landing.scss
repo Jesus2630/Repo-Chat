@@ -3,17 +3,54 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* 
-html{
-    scroll-behavior: smooth;
+
+.bg-landing{
+    background-color: #fff;
 }
 
-body{
-    font-family: 'Raleway', sans-serif;
-} */
+.nav_landing{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1.3rem;
+    align-items: center;
+
+    .antara_nav{
+        font-size: 2.5rem;
+        font-weight: 600; 
+    }
+
+    p{
+        margin-left: 0.5rem;
+    }
+    
+    .acciones_nav{        
+    font-family: var(--bs-body-font-family);
+
+        .login_nav{
+            font-family: var(--bs-body-font-family);
+            font-size: 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #fff
+        }
+        .registro_nav{
+            font-family: var(--bs-body-font-family);
+            margin-left: 15px;
+            align-items: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            padding: 5px 15px;
+            background-color: #110f1386;
+            text-decoration: none;
+            color: #fff
+        }
+    }
+}
 
 .hero{
-    background-image: linear-gradient(120deg, #ffb009 0%, #7c4cc3 100%), url("../img/header.jpg");
+    background: rgb(253,245,207);
+    background: radial-gradient(circle, #fdf5cf 0%, #eeaeca 25%, #9c72d8 100%);
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
@@ -26,7 +63,7 @@ body{
 
 .textos-hero{
     height: 500px;
-    color: #fff;
+    color: #2a1554;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +71,7 @@ body{
 
     .Antara{
         display: flex;
-
+        
         i{
             font-size: 1.5rem;
         }
@@ -42,6 +79,7 @@ body{
 }
 .textos-hero h1{
     font-size: 60px;
+    font-weight: 700;
 }
 
 .textos-hero p{
@@ -56,13 +94,23 @@ body{
     background: #a18cd1;
     border-radius: 8px;
     color: #fff;
+    font-family: var(--bs-body-font-family);
 }
 
-.svg-hero{
+.imagengatito{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    top: 160px;
+    left: 650px;
+    width: 78%;
+    z-index: 1;
+
+    img{
+        width: 74%;
+    }
+}
+
+#boton_registro{
+    z-index: 10;
 }
 /* Estilos generales */
 
@@ -72,10 +120,10 @@ body{
     max-width: 1000px;
     overflow: hidden;
     margin: auto;
-    padding: 0 0 80px 0;
+    padding: 0 0 50px 0;
 }
 .contenedor{
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .titulo{
@@ -85,8 +133,18 @@ body{
     margin-bottom: 30px;
 }
 
+.titulo_reglamento{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
 .titulo.left{
     text-align: left;
+    margin-top: 50px;
+
 }
 
 .titulo.right{
@@ -98,7 +156,8 @@ body{
 }
 
 .website img{
-    width: 48%;
+    height: 15%;
+    padding-top: 50px;
 }
 
 .website .contenedor-textos-main{
@@ -113,13 +172,15 @@ body{
 .cta{
     display: inline-block;
     text-decoration: none;
-    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background-image: linear-gradient(45deg, rgba(156,114,216,1) 0%, #eeaeca 99%, rgba(253,245,207,1) 100%);
     padding: 12px 15px;
     border-radius: 8px;
     color: #fff;
+    font-family: var(--bs-body-font-family);
 }
+
 .info{
-    background:#4f28cd;
+    background: rgba(156,114,216,1);
     color: #fff;
 }
 
@@ -159,99 +220,69 @@ body{
     font-size: 25px;
     margin-bottom: 10px;
 }
-/* galeria */
 
-.galeria{
-    background: #f2f2f2;
-}
 
-.galeria-cont{
-    width: 100%;
+
+#footer{
+    background:#110f13;
+    color: #fff;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    overflow: hidden;
-}
+    align-items: center;
+    padding-bottom: 3rem;
 
-.galeria-cont>img{
-    width: 30%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
-    cursor: pointer;
-    overflow: hidden;
-}
-
-/* info2 */
-
-.last-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 40px;
-}
-
-.last-section img{
-    width: 48%;
-}
-
-.last-section .contenedor-textos-main{
-    width: 40%;
-}
-/* footer */
-
-footer{
-    background:#f5576c;
-    color: #fff;
-}
-
-.form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .input{
-    background: transparent;
-    border: 0;
-    color: #fff;
-    outline: none;
-    border: 1px  solid #fff;
-    padding: 20px 10px;
-}
-
-    .input::placeholder{
-        color: #fff;
-        font-family: 'raleway', 'sans-serif';
+    h2{
+        font-size: 4rem;
     }
 
-    input[type="text"], 
-    input[type="email"]{
-        display: inline-block;
-        width: 49%;
-        margin-bottom: 30px;
-    }
-
-    .form textarea{
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    input[type="submit"]{
-        width: 120px;
-        text-align: center;
-        padding: 14px 0;
-    }
-
-    input[type="submit"]:hover{
-        cursor: pointer;
-        color: tomato;
-        background: #fff;
+    .chats_footer{
+        display: flex;
+        flex-direction: column;
     }
 }
 
+
+@media screen and (min-width:1900px){
+
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 930px;
+        width: 78%;
+    
+
+    .imagengatito img {
+        width: 64%;
+    }
+}}
+
+@media screen and (min-width:1700px){
+
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 850px;
+        width: 78%;
+    
+
+    .imagengatito img {
+        width: 64%;
+    }
+}
+}
 
 @media screen and (max-width:800px){
+
+    .imagengatito {
+        position: absolute;
+        top: 360px;
+        left: 430px;
+        width: 78%;
+
+    .imagengatito img {
+        width: 68%;
+    }
+
     .textos-hero h1{
         text-align: center;
         font-size: 50px;
@@ -291,11 +322,6 @@ footer{
         margin-bottom: 20px;
     }
 
-    /* galeria */
-
-    .galeria-cont>img{
-        width: 48%;
-    }
      /* last */
 
     .last-section img{
@@ -332,4 +358,13 @@ footer{
     .galeria-cont>img{
         width: 97%;
     }
+
+    .imagengatito img {
+        display: none;
+    }
+
+    .nav_landing p{
+        display: none;
+    } 
+}
 }
