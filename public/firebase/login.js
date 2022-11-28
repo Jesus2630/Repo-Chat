@@ -1,4 +1,4 @@
-// modulo que verifica que el usuario este inicializado 
+/*// modulo que verifica que el usuario este inicializado 
 import {onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 // modulos importados 
 import { app, auth } from "./firebaselogin.js";
@@ -8,4 +8,4 @@ import { app, auth } from "./firebaselogin.js";
 onAuthStateChanged(auth, async(user)=>{
     console.log(user, "hola si  soy el usuario")
 
-})
+})*/

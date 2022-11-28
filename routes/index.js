@@ -6,11 +6,14 @@ const app = express();
 //?Controllers
 const { chatController} = require('../controllers/chatControllers');
 const { homeController} = require('../controllers/homeControllers');
-const { loginController,resdirectChat} = require('../controllers/loginControllers');
+const { resdirectChat} = require('../controllers/loginControllers');
+const{loginController}=require('../controllers/LoginGoogleController')
 const { registerController} = require('../controllers/registerControllers');
 const{registroUsuario}=require('../firebase/signup')
-const{ingresoUsuario, ingresoOAuth}=require('../firebase/singin')
-const{facebookStatus}=require('../firebase/emailFbLogin')
+const{ingresoUsuario}=require('../firebase/singin')
+const{ingresoOAuth}=require('../firebase/emailFbLogin')
+const{oA}=require('../firebase/signOut')
+
 //Home
 router.get('/', homeController)
 
@@ -24,11 +27,11 @@ router.post('/register',registroUsuario)
 router.get('/login', loginController)
 router.post('/login', ingresoUsuario)
 router.get('/_/auth', ingresoOAuth)
-router.get('/login',facebookStatus)
 
 
 //Chat
 router.get('/chat', chatController)
+
 
 
 
