@@ -1,3 +1,11 @@
-const { GoogleAuthProvider }= require("firebase/auth");
+const{request,response}=require('express')
 
-const provider = new GoogleAuthProvider();
+
+const facebookStatus=(request,response)=>{
+FB.getLoginStatus(function(response) {
+    console.log(statusChangeCallback(response))
+})};
+
+module.exports={
+    facebookStatus
+}

@@ -9,7 +9,8 @@ const { homeController} = require('../controllers/homeControllers');
 const { loginController,resdirectChat} = require('../controllers/loginControllers');
 const { registerController} = require('../controllers/registerControllers');
 const{registroUsuario}=require('../firebase/signup')
-const{ingresoUsuario}=require('../firebase/singin')
+const{ingresoUsuario, ingresoOAuth}=require('../firebase/singin')
+const{facebookStatus}=require('../firebase/emailFbLogin')
 //Home
 router.get('/', homeController)
 
@@ -22,6 +23,8 @@ router.post('/register',registroUsuario)
 
 router.get('/login', loginController)
 router.post('/login', ingresoUsuario)
+router.get('/_/auth', ingresoOAuth)
+router.get('/login',facebookStatus)
 
 
 //Chat

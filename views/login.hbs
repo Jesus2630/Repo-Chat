@@ -13,14 +13,18 @@
             <p>O tambien por: </p>
             <div class="social-login">
                 <div class="social-login-element">
-                    <img src="img/google.svg" alt="">
+                    <a href="{{googleOAuthURL}}">
+                    <img src="img/google.svg" alt=""> 
                     <span>Google</span>
+                    </a>
                 </div>
                 <div class="social-login-element">
-                    <img src="img/face.svg" alt="">
-                    <span>Facebook</span>
+                    <div id="fb-root">
+                        <div class="fb-login-button" data-width="150px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
+                        </div>
                 </div>
             </div>            
         </div>          
     </div>
 </div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0&appId=448494250700509&autoLogAppEvents=1" nonce="TnseseNz"></script>
