@@ -34,12 +34,12 @@ class Sockets {
             })
 
             //Desconexión del cliente
-            socket.on('disconnect', ()=>{
+            /*socket.on('disconnect', ()=>{
               let personaBorrada = usuarios.borrarPersona(socket.id);
 
               socket.broadcast.emit('crear-mensaje', {usuario: 'Administrador', mensaje: `${personaBorrada.nombre} abandonó la sala.`});
               socket.broadcast.emit('lista-personas', usuarios.getPersonas());
-            })
+            })*/
         })
     }
 }

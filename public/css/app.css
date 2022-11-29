@@ -387,7 +387,7 @@ body {
   cursor: pointer;
 }
 
-.social-login-element {
+.social-login-element, .fb-root {
   width: 12.5rem;
   height: 3.75rem;
   font-size: 1.2rem;
@@ -1011,12 +1011,6 @@ body {
   margin-left: 4px;
   word-break: break-all;
 }
-<<<<<<< HEAD
-.chat-area .relleno {
-  padding-bottom: 27rem;
-}
-=======
->>>>>>> f0efff6ff54ddbf14279af62c9ede5cf93fbb208
 .chat-area .chat-enviar-mensaje {
   display: flex;
   padding: 5px 4px;
