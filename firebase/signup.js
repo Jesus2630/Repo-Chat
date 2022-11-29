@@ -26,10 +26,9 @@ const actionCodeSettings = {
 };
 
 
-const registroUsuario = async(request,response)=>{
+const registroUsuario = async(req = request,res = response)=>{
  
-  const {email, pass} = request.body;
-  console.log(email,pass)
+  const {email, pass} = req.body;
   try {
 
       const usuarioCredencial = await createUserWithEmailAndPassword(
@@ -39,8 +38,6 @@ const registroUsuario = async(request,response)=>{
 
       )
 
-
-     
       sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {            // The link was successfully sent. Inform the user.
           // Save the email locally so you don't need to ask the user for it again
@@ -50,18 +47,22 @@ const registroUsuario = async(request,response)=>{
         })
         .catch((error) => {
           console.log(error.code);
-           console.log(error.message);
-          // ...
+          console.log(error.message);
         });
-
-
 
       console.log(usuarioCredencial)
      if(usuarioCredencial){
-        response.send("you are in")
+        res.redirect('/login')
      }
   } catch (error) {
-      console.log(error)
+      const errores = (error)=>{
+        if(error.code == "auth/email-already-in-use"){return 'Correo en uso'}
+      }
+      const resultErrores = errores(error);
+
+      res.render('register', {
+        error: resultErrores
+      });
   }
 }
 

@@ -5,9 +5,7 @@ const usuarios = new Usuarios();
 class Sockets {
 
     constructor( io ) {
-
         this.io = io;
-
         this.socketEvents();
     }
 

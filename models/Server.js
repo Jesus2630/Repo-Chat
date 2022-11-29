@@ -3,6 +3,7 @@ const cors    = require('cors');
 const database = require('../db/config')
 const exphbs  = require('express-handlebars');
 const socketio = require('socket.io');
+/* const flash = require('connect-flash'); */
 
 const Sockets = require('../sockets/sockets');
 
@@ -51,8 +52,13 @@ class Server{
         //Public
         this.app.use(express.static('public'))
         //Sockets
-        //
         this.app.use(express.urlencoded({extended:false}))
+        //Alertas y Flashh messages
+        /* this.app.use(flash());
+        this.app.use((req,res,next) =>{
+            res.locals.mensajes = req.flash(); 
+            next();
+        }) */
     }
 
     routes(){

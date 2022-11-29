@@ -8,40 +8,34 @@ const{auth}=require('../firebase/login');
 
 
 
-const ingresoUsuario = async(request,response)=>{
+const ingresoUsuario = async(req = request,res = response)=>{
  
-  const {email, pass} = request.body;
-  console.log(email,pass)
+  const {email, pass} = req.body;
   try {
-
       const usuarioCredencial = await signInWithEmailAndPassword(
           auth,
           email,
           pass
-
       )
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-         console.log(user,"hola soy")
-          const uid = user.uid;
-          // ...
-        } else {
-          console.log('nada')
-        }
-      });
       
 
       if(usuarioCredencial){
-        response.redirect('chat')
+        res.redirect('chat')
       } 
   } catch (error) {
-    console.log(error)
+    //Perdón a los dioses de la programación por repetir código jeje
+      const errores = (error)=>{
+        if(error.code == "auth/user-not-found"){return 'Usuario inexistente'}
+      }
+      const resultErrores = errores(error);
+
+      res.render('login', {
+        error: resultErrores
+      });
   }
 }
 
 module.exports={
   ingresoUsuario,
- 
-  
 }
 
