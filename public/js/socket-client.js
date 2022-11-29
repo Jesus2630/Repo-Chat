@@ -38,7 +38,7 @@ socket.on('mostrar-mensaje', (data)=>{
     
     cajaMensajes.innerHTML += `
         <div class="mensaje">
-            <p class="fs-5">${data.usuario}: ${data.mensaje} -- </p>
+            <p class="fs-5"><span class="fw-bold">${data.usuario}</span>: ${data.mensaje} -- </p>
         </div>
     `
 })
