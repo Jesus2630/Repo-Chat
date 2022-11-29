@@ -9,10 +9,10 @@ const socket = io();
 
 var params = new URLSearchParams(window.location.search);
 
-if(!params.has('nombre')){
+/*if(!params.has('nombre')){
     window.location = '/'
     throw new Error('Debe ingresar un usuario')
-}
+}*/
 
 var usuario = {
     nombre: params.get('nombre')
@@ -42,11 +42,7 @@ socket.on('mostrar-mensaje', (data)=>{
     
     cajaMensajes.innerHTML += `
         <div class="mensaje">
-<<<<<<< HEAD
             <p class="fs-5">${data.usuario}: ${data.mensaje} </p>
-=======
-            <p class="fs-5">${data.usuario}: ${data.mensaje} -- </p>
->>>>>>> rama-front
         </div>
     `
 })
@@ -58,10 +54,6 @@ socket.on('mensaje-privado', (mensaje)=>{
 
 
 socket.on('connect', ()=>{
-<<<<<<< HEAD
-=======
-    
->>>>>>> rama-front
     modoStatus.classList.remove('status-off')
     modoStatus.classList.add('status-on')
 })
@@ -69,15 +61,6 @@ socket.on('connect', ()=>{
 socket.on('crear-mensaje', (mensaje)=>{
     console.log('Servidor: ',mensaje)
 });
-<<<<<<< HEAD
-=======
-
-socket.on('lista-personas',(personas)=>{
-    console.log(personas)
-})
-
-socket.on('disconnect', ()=>{
->>>>>>> rama-front
 
 socket.on('lista-personas',(personas)=>{
     console.log(personas)

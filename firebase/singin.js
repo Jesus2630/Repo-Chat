@@ -22,7 +22,7 @@ const ingresoUsuario = async(request,response)=>{
       )
       onAuthStateChanged(auth, (user) => {
         if (user) {
-         console.log(user,"hola soy")
+        console.log(user,"hola soy")
           const uid = user.uid;
           // ...
         } else {

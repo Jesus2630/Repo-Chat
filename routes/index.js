@@ -12,7 +12,7 @@ const { registerController} = require('../controllers/registerControllers');
 const{registroUsuario}=require('../firebase/signup')
 const{ingresoUsuario}=require('../firebase/singin')
 const{ingresoOAuth}=require('../firebase/emailFbLogin')
-const{oA}=require('../firebase/signOut')
+const{change}=require('../firebase/stateOnChat')
 
 //Home
 router.get('/', homeController)
@@ -31,7 +31,7 @@ router.get('/_/auth', ingresoOAuth)
 
 //Chat
 router.get('/chat', chatController)
-
+router.get('/chat', change)
 
 
 
