@@ -817,7 +817,7 @@ body {
 .divisiones {
   display: flex;
   height: 100%;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 /* ---- nav y parte superior de la página ---- */
@@ -956,8 +956,15 @@ body {
   background-color: rgb(69, 173, 43);
   border: 3px solid #1a181d;
   border-radius: 50%;
-  /*             width: 1.2rem;
-              height: 1.2rem; */
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1px;
+}
+.user .user_up .contenedor_img .status-off {
+  background-color: rgb(173, 43, 43);
+  border: 3px solid #1a181d;
+  border-radius: 50%;
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -973,7 +980,7 @@ body {
 .chat-area .canal_name {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgb(61, 61, 61);
+  border-bottom: 1px solid rgba(61, 61, 61, 0.425);
 }
 .chat-area .canal_name i {
   font-size: 1.9rem;
@@ -995,6 +1002,9 @@ body {
   height: 80vh;
   overflow-y: auto;
   position: relative;
+}
+.chat-area .chat_estructura img {
+  width: 40%;
 }
 .chat-area .chat_estructura .mensaje {
   display: flex;
@@ -1127,13 +1137,30 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
-.chat-area .open_container_emojis {
+.chat-area .open_container_emojis:not(.opciones) {
   display: grid;
+}
+.chat-area .opciones {
+  font-size: 2rem;
+  display: flex;
+  position: relative;
+  margin-top: 3.5rem;
+  padding-bottom: 2.2rem;
+  cursor: pointer;
+}
+.chat-area #icon_emoji {
+  position: absolute;
+  right: 50px;
+}
+.chat-area #icon_sticker {
+  position: absolute;
+  padding-right: 1rem;
+  left: 50px;
 }
 .chat-area .container_stickers {
   position: absolute;
   display: none;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
   padding: 5px 10px;
@@ -1143,6 +1170,10 @@ body {
 }
 .chat-area .container_stickers span#sticker img {
   width: 10%;
+  cursor: pointer;
+}
+.chat-area .open_container_stickers {
+  display: inline-grid;
 }
 .chat-area button#btn-enviar {
   width: auto;
