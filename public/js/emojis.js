@@ -1,15 +1,12 @@
-/* Codigo de reserva */
-
-
 //Variables emojis
-/* const cajaEmojis = document.querySelector("#container_emojis");
+const cajaEmojis = document.querySelector("#container_emojis");
 const emojis = document.querySelectorAll("#emoji");
 const botonEmoji = document.querySelector("#botonEmoji");
-const input = document.querySelector('#cuadroMensaje'); */
+const input = document.querySelector('#cuadroMensaje');
 //Variables stickers
 const cajaStickers = document.querySelector("#container_stickers");
 const stickers = document.querySelectorAll("#sticker");
-const scuadroMensaje  = document.querySelector('#cuadroMensaje');
+const scuadroMensaje  = document.querySelector('#txtMensaje');
 //Opciones div
 const menuOpciones = document.querySelector("#opciones");
 const iconEmoji = document.querySelector("#icon_emoji");
@@ -18,14 +15,6 @@ const iconEmoji2 = document.querySelector("#icon_emoji_2");
 const iconSticker2 = document.querySelector("#icon_sticker_2");
 
 
-var params = new URLSearchParams(window.location.search);
-
-var usuario = {
-    nombre: params.get('nombre'),
-    sala: params.get('sala')
-};
-
- 
 //emoji
 botonEmoji.addEventListener("click", () => {
     cajaEmojis.classList.toggle("open_container_emojis");
@@ -44,7 +33,7 @@ for(const emojisFor of emojis){
     emojisFor.addEventListener("click", () => {
         input.value += emojisFor.innerHTML;
     });
-}; */
+};
 
 
 //sticker
@@ -58,16 +47,13 @@ iconSticker.addEventListener("click", () => {
 
 for(const stickersFor of stickers){
     stickersFor.addEventListener("click", () => {
-        scajaMensajes.innerHTML += `${nombre}:  ${stickersFor.innerHTML}`;
+        scuadroMensaje.value += stickersFor.innerHTML;
     });
-}; 
+};
 
 
 /* for(const stickersFor of stickers){
     stickersFor.addEventListener("click", () => {
-        scajaMensajes.innerHTML += `
-        <div class="mensaje">
-            <p>${stickersFor.innerHTML}</p>
-        </div>`
+        scajaMensajes.innerHTML += stickersFor.innerHTML;
     });
 }; */
