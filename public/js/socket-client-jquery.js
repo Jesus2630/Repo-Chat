@@ -13,10 +13,27 @@ var usuario = $('#usuario');
 var mostrarsala = $('#sala');
 var usuariosLeft = $('#usuariosLeft');
 
+//Variables emojis
+const cajaEmojis = document.querySelector("#container_emojis");
+const emojis = document.querySelectorAll("#emoji");
+const botonEmoji = document.querySelector("#botonEmoji");
+const input = document.querySelector('#cuadroMensaje');
+//Variables stickers
+const cajaStickers = document.querySelector("#container_stickers");
+const stickers = document.querySelectorAll("#sticker");
+const scuadroMensaje  = document.querySelector('#txtMensaje');
+const scajaMensajes  = document.querySelector('#divChatbox');
+
+
 
 //Muestro el nombre del usuario y sala
 usuario.html(nombre);
 mostrarsala.html(sala);
+
+//Config para stickers y emojis
+botonEmoji.addEventListener("click", () => {
+    cajaStickers.classList.toggle("open_container_stickers")
+});
 
 
 
