@@ -1,0 +1,27 @@
+ <div class="textos-hero">
+        <span class="Antara"><h1>Antara chat</h1><i class='bx bxs-message-rounded-dots'></i></span>
+        <p>La red de chat para contactar personas</p>
+        <div style="display: flex;">
+        <form class="form-horizontal form-landing form-material" id="loginform" action="/chat">
+                        <h3 class="box-title m-b-20 text-center">Chatear</h3>
+                        <div class="form-group ">
+                            <div class="col-xs-12">
+                                <input class="form-control" type="text" required="" placeholder="Nombre de usuario" name="nombre"> </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <select class="form-control" name="sala">
+                                    <option value="General">General</option>
+                                    <option value="Juegos">Juegos</option>
+                                    <option value="Estudio">Estudio</option>
+                                </select>
+
+                                {{!-- <input class="form-control" type="text" required="" placeholder="Sala de chat" name="sala">  --}}
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <div class="col-xs-12 p-b-20">
+                                <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Ingresar al chat</button>
+                            </div>
+                        </div>

@@ -3,7 +3,6 @@
 const { getAuth, createUserWithEmailAndPassword, sendEmailVerification} = require("firebase/auth");
 const {request,response}=require('express') 
 const{auth}=require('../firebase/login'); 
-const{auth:authAdmin}=require('../firebase/admin'); 
 const{showmessage}=require('../firebase/showmessage')
 
 
@@ -41,19 +40,6 @@ const registroUsuario = async(req = request,res = response)=>{
      const res = await sendEmailVerification(user,actionCodeSettings).catch(console.error)
       //  console.log(res)  
       
-
-      sendSignInLinkToEmail(auth, email, actionCodeSettings)
-        .then(() => {            // The link was successfully sent. Inform the user.
-          // Save the email locally so you don't need to ask the user for it again
-          // if they open the link on the same device.
-          window.localStorage.setItem('emailForSignIn', email);
-          // ...
-        })
-        .catch((error) => {
-          console.log(error.code);
-          console.log(error.message);
-        });
-
       console.log(usuarioCredencial)
      if(usuarioCredencial){
         res.redirect('/login')

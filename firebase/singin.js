@@ -20,7 +20,17 @@ const ingresoUsuario = async(req = request,res = response)=>{
       
 
       if(usuarioCredencial){
-        res.redirect('chat')
+        if(!usuarioCredencial.user.emailVerified){
+          res.render('login', {
+            error: 'No estas autenticado, revise su Email'
+          });
+           }
+       
+
+
+        else{
+          res.redirect('signInUser')
+        }
       } 
   } catch (error) {
     //Perdón a los dioses de la programación por repetir código jeje
@@ -29,7 +39,7 @@ const ingresoUsuario = async(req = request,res = response)=>{
       }
       const resultErrores = errores(error);
 
-      res.render('login', {
+     res.render('login', {
         error: resultErrores
       });
   }

@@ -4,14 +4,14 @@
         <div class="login-info-container">
             <h1 class="title">Inicia sesión:</h1>
             <form class="inputs-container" method="post" action="/login" >
-                {{#if error}}
+                {{#if error}} 
                 <p class="text-center mt-2 bg-danger p-2 fw-bold text-white">{{error}}</p>
                 {{/if}}
                 <input class="input" type="text" placeholder="Usuario" name="email">
                 <input class="input" type="text" placeholder="Contraseña" name="pass">
                 <p><span class="span"> Olvidaste tu Contraseña</span></p>
                 <button class="btn">login</button>
-                <p>¿Todavia no tenes una cuenta? <span class="span">Hace click acá</span></p>
+                <p>¿Todavia no tenes una cuenta? <a class="span" href="/register">Hace click acá</a></p>
             </form>
             <p>O tambien por: </p>
             <div class="social-login">

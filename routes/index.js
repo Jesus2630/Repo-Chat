@@ -15,6 +15,7 @@ const{registroUsuario}=require('../firebase/signup');
 const{ingresoUsuario}=require('../firebase/singin');
 const{ingresoOAuth}=require('../firebase/emailFbLogin');
 const{change}=require('../firebase/stateOnChat');
+const{stageRoom}=require('../controllers/SignInUser')
 
 //Home
 router.get('/', homeController);
@@ -28,6 +29,7 @@ router.post('/register',registroUsuario);
 
 router.get('/login', loginController);
 router.post('/login', ingresoUsuario);
+router.get('/signInUser',stageRoom)
 router.get('/_/auth', ingresoOAuth);
 
 
