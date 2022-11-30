@@ -1,73 +1,61 @@
-//Referencias
-const cajaMensajes  = document.querySelector('#caja-mensajes');
-const cuadroMensaje = document.querySelector('#cuadroMensaje');
-const mensajeForm   = document.querySelector('#formMensaje');
-const modoStatus    = document.querySelector('#status');
-
-//Socket client
-const socket = io();
+var socket = io();
 
 var params = new URLSearchParams(window.location.search);
 
-
-var usuario = {
-    nombre: params.get('nombre')
+if (!params.has('nombre') || !params.has('sala')) {
+    window.location = '/';
+    throw new Error('El nombre y sala son necesarios');
 }
 
-socket.on('connect', ()=>{
-    modoStatus.classList.remove('status-off');
-    modoStatus.classList.add('status-on');
+var usuario = {
+    nombre: params.get('nombre'),
+    sala: params.get('sala')
+};
 
-    socket.emit('entrar-chat', usuario, respuesta =>{
-        console.log('Usuarios conectados: ',respuesta)
+
+
+socket.on('connect', function() {
+    console.log('Conectado al servidor');
+
+    socket.emit('entrarChat', usuario, function(resp) {
+        // console.log('Usuarios conectados', resp);
+        renderizarUsuarios(resp);
     });
-})
 
-mensajeForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    
-    const mensaje = {
-        usuario: usuario.nombre,
-        mensaje: cuadroMensaje.value,
-    }
-    socket.emit('enviar-mensaje', mensaje)
-    cuadroMensaje.value = ""
-})
-
-socket.on('mostrar-mensaje', (data)=>{
-    
-    cajaMensajes.innerHTML += `
-        <div class="mensaje">
-            <p class="fs-5"><span class="fw-bold">${data.usuario}</span>: ${data.mensaje} -- </p>
-        </div>
-    `
-})
-
-//?Mensaje Privado
-socket.on('mensaje-privado', (mensaje)=>{
-    console.log('Mensaje privado: ', mensaje)
-})
-
-
-socket.on('connect', ()=>{
-    
-    modoStatus.classList.remove('status-off')
-    modoStatus.classList.add('status-on')
-})
-
-socket.on('crear-mensaje', (mensaje)=>{
-    console.log('Servidor: ',mensaje)
 });
 
-socket.on('lista-personas',(personas)=>{
-    console.log(personas)
-})
+// escuchar
+socket.on('disconnect', function() {
 
-socket.on('disconnect', ()=>{
-    console.log('Se perdió la conexión con el servidor')
-})
+    console.log('Perdimos conexión con el servidor');
 
-//?Mensajes Privados
-socket.on('mensaje-privado', (mensaje)=>{
-    console.log('Mensaje privado: ', mensaje)
-})
+});
+
+
+// Enviar información
+// socket.emit('crearMensaje', {
+//     nombre: 'Fernando',
+//     mensaje: 'Hola Mundo'
+// }, function(resp) {
+//     console.log('respuesta server: ', resp);
+// });
+
+// Escuchar información
+socket.on('crearMensaje', function(mensaje) {
+    // console.log('Servidor:', mensaje);
+    renderizarMensajes(mensaje, false);
+    scrollBottom();
+});
+
+// Escuchar cambios de usuarios
+// cuando un usuario entra o sale del chat
+socket.on('listaPersona', function(personas) {
+    renderizarUsuarios(personas);
+});
+
+// Mensajes privados
+socket.on('mensajePrivado', function(mensaje) {
+
+    console.log('Mensaje Privado:', mensaje);
+
+});

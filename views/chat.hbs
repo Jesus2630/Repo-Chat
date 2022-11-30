@@ -20,7 +20,7 @@
         <div class="user">
             <div class="user_up">
                 <div class="contenedor_img"><img class="user_pfp_img" src="./img/kitty.PNG" alt=""><span class="status-on" id="status"></span></div>
-                <h5 id="usuario">username</h5>
+                <h5 id="usuario"></h5>
             </div>
 
             <div class="canales">
@@ -50,8 +50,8 @@
 
         <div class="chat-area w-75">
             <div class="canal_name bg-light"><i class='bx bx-hash'></i><h3>general</h3></div>
-            <div class="chat_estructura p-2 relleno bg-light" id="caja-mensajes">
-            </div>
+            <ul class="chat_estructura p-2 relleno bg-light" id="divChatbox">
+            </ul>
             <div class="container_emojis" id="container_emojis">
                 <span id="emoji">😊</span>
                 <span id="emoji">😉</span>
@@ -88,15 +88,15 @@
             </div>  
             <div class="div-area-mensaje" style="display: flex;margin: 0 1rem;padding: 0 0 0.2rem 0">
 {{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
-                <form action="" class="gap-2" id="formMensaje">
+                <form action="" class="gap-2" id="formEnviar">
                     <div class="area-mensaje">
-                        <input type="text" class="form-control-chat" id="cuadroMensaje" placeholder="Enviar mensaje...">
+                        <input type="text" class="form-control-chat" id="txtMensaje" placeholder="Enviar mensaje...">
                     </div>
                     <div class="col">
                         <div class="area-emoji" id="botonEmoji">
                             <i class='bx bx-smile'></i>
                         </div>
-                        <button id="btn-enviar" class="boton_enviar">
+                        <button type="submit" id="btn-enviar" class="boton_enviar">
                             <i class='bx bx-send'></i>
                         </button>
                     </div>
@@ -106,24 +106,16 @@
 
         <div class="lista_de_usuarios">
             <div class="users_online">
-                <h4>3 usuarios online</h4>
+                <h4>Usuarios online</h4>
             </div>
-            <div class="lista">
-                <div class="nombre"><i class='bx bxs-user'></i>
-                    <h6>username</h6>
-                </div>
-                <div class="nombre"><i class='bx bxs-user'></i>
-                    <h6>Klaha</h6>
-                </div>
-                <div class="nombre"><i class='bx bxs-user'></i>
-                    <h6>Mana</h6>
-                </div>
-            </div>
+            <ul class="chatonline style-none" id="divUsuarios"> </ul>
         </div>
     </div>
 
 </div>
 
+<script src="/js/libs/jquery.min.js"></script>
 <script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket-client-jquery.js"></script>
 <script src="/js/socket-client.js"></script>
 <script src="/js/emojis.js"></script>

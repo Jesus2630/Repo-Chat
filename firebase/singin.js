@@ -17,18 +17,6 @@ const ingresoUsuario = async(req = request,res = response)=>{
           email,
           pass
       )
-<<<<<<< HEAD
-=======
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-        console.log(user,"hola soy")
-          const uid = user.uid;
-          // ...
-        } else {
-          console.log('nada')
-        }
-      });
->>>>>>> df7a49954161948f676c6fee19da0471f79dd156
       
 
       if(usuarioCredencial){

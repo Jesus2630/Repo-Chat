@@ -9,29 +9,34 @@ const { homeController} = require('../controllers/homeControllers');
 const { resdirectChat} = require('../controllers/loginControllers');
 const{loginController}=require('../controllers/LoginGoogleController')
 const { registerController} = require('../controllers/registerControllers');
-const{registroUsuario}=require('../firebase/signup')
-const{ingresoUsuario}=require('../firebase/singin')
-const{ingresoOAuth}=require('../firebase/emailFbLogin')
-const{change}=require('../firebase/stateOnChat')
+const salasController = require('../controllers/salasController');
+
+const{registroUsuario}=require('../firebase/signup');
+const{ingresoUsuario}=require('../firebase/singin');
+const{ingresoOAuth}=require('../firebase/emailFbLogin');
+const{change}=require('../firebase/stateOnChat');
 
 //Home
-router.get('/', homeController)
+router.get('/', homeController);
 
 
 //
 
 //Registro | Login
-router.get('/register', registerController)
-router.post('/register',registroUsuario)
+router.get('/register', registerController);
+router.post('/register',registroUsuario);
 
-router.get('/login', loginController)
-router.post('/login', ingresoUsuario)
-router.get('/_/auth', ingresoOAuth)
+router.get('/login', loginController);
+router.post('/login', ingresoUsuario);
+router.get('/_/auth', ingresoOAuth);
 
 
 //Chat
-router.get('/chat', chatController)
-router.get('/chat', change)
+router.get('/chat', chatController);
+router.get('/chat', change);
+
+//Salas
+router.get('/salas', salasController.mostrarSalas);
 
 
 

@@ -42,7 +42,6 @@ const registroUsuario = async(req = request,res = response)=>{
       //  console.log(res)  
       
 
-<<<<<<< HEAD
       sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {            // The link was successfully sent. Inform the user.
           // Save the email locally so you don't need to ask the user for it again
@@ -56,14 +55,10 @@ const registroUsuario = async(req = request,res = response)=>{
         });
 
       console.log(usuarioCredencial)
-=======
-      console.log(usuarioCredencial, "soy el usercredential")
->>>>>>> df7a49954161948f676c6fee19da0471f79dd156
      if(usuarioCredencial){
         res.redirect('/login')
      }
   } catch (error) {
-<<<<<<< HEAD
       const errores = (error)=>{
         if(error.code == "auth/email-already-in-use"){return 'Correo en uso'}
       }
@@ -72,9 +67,6 @@ const registroUsuario = async(req = request,res = response)=>{
       res.render('register', {
         error: resultErrores
       });
-=======
-      console.error(error)
->>>>>>> df7a49954161948f676c6fee19da0471f79dd156
   }
 }
 
