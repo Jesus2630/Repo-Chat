@@ -11,11 +11,21 @@ const scuadroMensaje  = document.querySelector('#cuadroMensaje');
 const menuOpciones = document.querySelector("#opciones");
 const iconEmoji = document.querySelector("#icon_emoji");
 const iconSticker = document.querySelector("#icon_sticker");
+const iconEmoji2 = document.querySelector("#icon_emoji_2");
+const iconSticker2 = document.querySelector("#icon_sticker_2");
+
 
 //emoji
 botonEmoji.addEventListener("click", () => {
     cajaEmojis.classList.toggle("open_container_emojis");
     iconEmoji.classList.add("opciones_activo");
+    cajaStickers.classList.remove("open_container_stickers")
+});
+
+iconEmoji2.addEventListener("click", () => {
+    cajaEmojis.classList.toggle("open_container_emojis");
+    iconEmoji.classList.add("opciones_activo");
+    cajaStickers.classList.remove("open_container_stickers")
 });
 
 
@@ -29,6 +39,8 @@ for(const emojisFor of emojis){
 //sticker
 iconSticker.addEventListener("click", () => {
     cajaStickers.classList.toggle("open_container_stickers")
+    cajaEmojis.classList.remove("open_container_emojis");
+    iconSticker2.classList.add("opciones_activo_2");
 });
 
 

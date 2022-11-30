@@ -1159,8 +1159,23 @@ body {
   padding-right: 1rem;
   left: 50px;
 }
+.chat-area #icon_emoji_2 {
+  position: absolute;
+  right: 50px;
+}
+.chat-area #icon_sticker_2 {
+  position: absolute;
+  padding-right: 1rem;
+  left: 50px;
+}
 .chat-area .opciones_activo {
   color: #7c4cc3;
+}
+.chat-area .opciones_activo_2 {
+  position: absolute;
+  color: #7c4cc3;
+  padding-right: 1rem;
+  left: 50px;
 }
 .chat-area .container_stickers {
   position: absolute;

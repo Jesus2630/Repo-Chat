@@ -435,9 +435,27 @@
         padding-right: 1rem;
         left: 50px;
     }
+
+    #icon_emoji_2{
+        position: absolute;
+        right: 50px;
+    }
+
+    #icon_sticker_2{
+        position: absolute;
+        padding-right: 1rem;
+        left: 50px;
+    }
     
         .opciones_activo{
             color: #7c4cc3;
+        }
+ 
+        .opciones_activo_2{
+            position: absolute;
+            color: #7c4cc3;
+            padding-right: 1rem;
+            left: 50px;
         }
 
     .container_stickers{
