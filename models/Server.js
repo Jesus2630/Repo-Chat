@@ -3,14 +3,13 @@ const cors    = require('cors');
 const database = require('../db/config')
 const exphbs  = require('express-handlebars');
 const socketio = require('socket.io');
-/* const flash = require('connect-flash'); */
 
 const Sockets = require('../sockets/sockets');
 
 class Server{
     constructor(){
         this.app = express();
-        this.port = process.env.PORT;
+        this.PORT = process.env.PORT || 4000;
         this.server = require('http').createServer(this.app);
         this.io = socketio(this.server);
         this.indexRoutes = require('../routes');
@@ -71,8 +70,8 @@ class Server{
     }
 
     listen(){
-        this.server.listen(this.port, ()=>{
-            console.log(`Servidor iniciado en el puerto ${this.port}`)
+        this.server.listen(this.PORT, ()=>{
+            console.log(`Servidor iniciado en el puerto ${this.PORT}`)
         })
     }
 }
