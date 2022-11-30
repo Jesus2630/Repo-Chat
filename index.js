@@ -1,6 +1,6 @@
-import Express from "express";
+require('dotenv').config()
+const Server = require('./models/Server');
 
-const app= Express();
+const server = new Server();
 
-app.listen(3000);
-console.log("Repo-Chat, puerto 3000");
+server.listen();

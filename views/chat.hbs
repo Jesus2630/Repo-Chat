@@ -1,0 +1,124 @@
+<div class="todo">
+    <div class="nav">
+        <div class="titulo_nav">
+                <a href="/"><h1 id="antara">Antara</h1></a> {{!-- arreglar que se pisan los estilos de login en la etiqueta a --}}
+                <i class='bx bxs-message-rounded-dots'></i>
+        </div>
+        <div class="parte_der_nav">
+            <div class="usuarios_nav"><i class='bx bxs-group'></i>
+                <h6>3</h6>
+            </div>
+            <div class="cerrar_sesion">
+                <a href="/">
+                    <button>Cerrar sesión</button>
+                </a>
+            </div>
+            <!--         <i class='bx bx-cog'></i> -->
+        </div>
+    </div>
+    <div class="divisiones">
+        <div class="user">
+            <div class="user_up">
+                <div class="contenedor_img"><img class="user_pfp_img" src="./img/kitty.PNG" alt=""><span class="status-on" id="status"></span></div>
+                <h5 id="usuario"></h5>
+            </div>
+
+            <div class="canales">
+                <span class="desplegable"><i class='bx bxs-chevron-down'></i>
+                    <h6>Canales</h6>
+                </span>
+                <span class="canal"><i class='bx bx-hash'></i>
+                    <h8>General</h8>
+                </span>
+                {{!-- Chats --}}
+                <span class="desplegable"><i class='bx bxs-chevron-down'></i>
+                    <h6>Chats</h6>
+                </span>
+                <ul id="usuariosLeft">
+                    
+                </ul>
+                {{!-- <div class="chat_privado"><span class="status_canal"></span>
+                    <h8>Lorem</h8>
+                </div>
+                <div class="chat_privado"><span class="status_canal"></span>
+                    <h8>Klaha</h8>
+                </div>
+                <div class="chat_privado"><span class="status_canal"></span>
+                    <h8>Mana</h8>
+                </div> --}}
+            </div>
+        </div>
+
+        <div class="chat-area w-75">
+            <div class="canal_name bg-light"><i class='bx bx-hash'></i>
+                <h3 id="sala"></h3>
+            </div>
+            <ul class="chat_estructura p-2 relleno bg-light" id="divChatbox">
+            </ul>
+            <div class="container_emojis" id="container_emojis">
+                <span id="emoji">😊</span>
+                <span id="emoji">😉</span>
+                <span id="emoji">😍</span>
+                <span id="emoji">🤪</span>
+                <span id="emoji">🤭</span>
+                <span id="emoji">😴​</span>
+                <span id="emoji">🥳​</span>
+                <span id="emoji">😎​</span>
+                <span id="emoji">😳​</span>
+                <span id="emoji">😢</span>
+                <span id="emoji">😭</span>
+                <span id="emoji">😤</span>
+                <span id="emoji">😡</span>
+                <span id="emoji">❤️</span>
+                <span id="emoji">🙈​</span>
+                <span id="emoji">👍​</span>
+                <span id="emoji">🙌​</span>
+                <span id="emoji">💪​</span>
+                <span id="emoji">👀​</span>
+                <span id="emoji">​​​​​​​​​​🔥</span>
+                <span id="emoji">​✨</span>
+                <span id="emoji">🎉</span>
+            <div class="opciones">
+                <i class='bx bx-wink-smile' id="icon_emoji"></i>
+                <i class='bx bx-sticker' id="icon_sticker"></i>
+            </div>
+            </div>               
+            <div class="container_stickers" id="container_stickers">
+                <span id="sticker"><img src="./img/cute.gif" alt=""></span>
+                <span id="sticker"><img src="./img/cute2.gif" alt=""></span>
+                <span id="sticker"><img src="./img/cute3.png" alt=""></span>
+                <span id="sticker"><img src="./img/cute4.gif" alt=""></span>
+            </div>  
+            <div class="div-area-mensaje" style="display: flex;margin: 0 1rem;padding: 0 0 0.2rem 0">
+{{!--             <h6 class="text-center w-100 fs-4">Username</h6> --}}
+                <form action="" class="gap-2" id="formEnviar">
+                    <div class="area-mensaje">
+                        <input type="text" class="form-control-chat" id="txtMensaje" placeholder="Enviar mensaje...">
+                    </div>
+                    <div class="col">
+                        <div class="area-emoji" id="botonEmoji">
+                            <i class='bx bx-smile'></i>
+                        </div>
+                        <button type="submit" id="btn-enviar" class="boton_enviar">
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="lista_de_usuarios px-4">
+            <div class="users_online">
+                <h4>Usuarios online</h4>
+            </div>
+            <ul class="chatonline px-2 style-none" id="divUsuarios"> </ul>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/libs/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket-client-jquery.js"></script>
+<script src="/js/socket-client.js"></script>
+{{!-- <script src="/js/emojis.js"></script>--}}

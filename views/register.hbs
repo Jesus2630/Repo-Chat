@@ -1,0 +1,38 @@
+<div class="registro_todo">
+    <div class="container registro">
+            <div class="header">
+                <h2>Crear cuenta</h2>
+            </div>
+            <form id="formuser" class="form" action="/register" method="post" name="form">
+                <div class="form-control"  name="divEmail">
+                    <p class="text-center mt-2 bg-danger fw-bold text-white">{{error}}</p>
+                    <label for="email">Email</label>
+                    <input type="email" id="signup-email" class="form-control"
+                    placeholder="Email" required  name="email"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error de mensaje</small>
+                </div>
+                <div class="form-control" name="divPass">
+                    <label for="password">Contraseña</label>
+                    <input  type="password" id="signup-pass" class="form-control"
+                    placeholder="Password" required name="pass"/>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error </small>
+                </div>
+                <button type="submit" >Enviar</button>
+                <p class="sociales_p">O también por: </p>
+                <div class="sociales">
+                    <div class="sociales-materia">
+                        <img src="img/google.svg" alt="">
+                        <span>Google</span>
+                    </div>
+                    <div class="sociales-materia">
+                    <img src="img/face.svg" alt="">
+                    <span>Facebook</span>
+                    </div>
+            </form>
+    </div>
+</div>    
+    

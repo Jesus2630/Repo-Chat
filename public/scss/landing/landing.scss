@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-landing{
+    background-color: #fff;
+}
+
+.nav_landing{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1.3rem;
+    align-items: center;
+
+    .antara_nav{
+        font-size: 2.5rem;
+        font-weight: 600; 
+    }
+
+    p{
+        margin-left: 0.5rem;
+    }
+    
+    .acciones_nav{        
+    font-family: var(--bs-body-font-family);
+
+        .login_nav{
+            font-family: var(--bs-body-font-family);
+            font-size: 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #fff
+        }
+        .registro_nav{
+            font-family: var(--bs-body-font-family);
+            margin-left: 15px;
+            align-items: center;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            padding: 5px 15px;
+            background-color: #110f1386;
+            text-decoration: none;
+            color: #fff
+        }
+    }
+}
+
+.hero{
+    background: rgb(253,245,207);
+    background: radial-gradient(circle, #fdf5cf 0%, #eeaeca 25%, #9c72d8 100%);
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.textos-hero{
+    height: 500px;
+    color: #2a1554;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .Antara{
+        display: flex;
+        
+        i{
+            font-size: 1.5rem;
+        }
+    }
+}
+.textos-hero h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.textos-hero p{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.textos-hero a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #a18cd1;
+    border-radius: 8px;
+    color: #fff;
+    font-family: var(--bs-body-font-family);
+}
+
+.form-landing{
+    z-index: 100;
+}
+
+.imagengatito{
+    position: absolute;
+    top: 160px;
+    left: 650px;
+    width: 78%;
+    z-index: 0;
+
+    img{
+        width: 74%;
+    }
+}
+
+#boton_registro{
+    z-index: 10;
+}
+/* Estilos generales */
+
+.contenedor,
+.wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 50px 0;
+}
+.contenedor{
+    padding: 50px 0;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo_reglamento{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.titulo.left{
+    text-align: left;
+    margin-top: 50px;
+
+}
+
+.titulo.right{
+    text-align: right;
+}
+.website{
+    display: flex;
+    justify-content: space-between;
+}
+
+.website img{
+    height: 15%;
+    padding-top: 50px;
+}
+
+.website .contenedor-textos-main{
+    width: 40%;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, rgba(156,114,216,1) 0%, #eeaeca 99%, rgba(253,245,207,1) 100%);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: var(--bs-body-font-family);
+}
+
+.info{
+    background: rgba(156,114,216,1);
+    color: #fff;
+}
+
+
+/* Cards */
+
+.content-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    text-align: center;
+    height: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.card:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.card i{
+    margin: 30px 0 20px 0;
+    color: #cc9199;
+    font-size: 50px;
+}
+
+.card p{
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+
+#footer{
+    background:#110f13;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 3rem;
+
+    h2{
+        font-size: 4rem;
+    }
+
+    .chats_footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width:1900px){
+
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 930px;
+        width: 78%;
+    
+
+    .imagengatito img {
+        width: 64%;
+    }
+}}
+
+@media screen and (min-width:1700px){
+
+    .imagengatito {
+        position: absolute;
+        top: 60px;
+        left: 850px;
+        width: 78%;
+    
+
+    .imagengatito img {
+        width: 64%;
+    }
+}
+}
+
+@media screen and (max-width:800px){
+
+    .imagengatito {
+        position: absolute;
+        top: 360px;
+        left: 430px;
+        width: 78%;
+
+    .imagengatito img {
+        width: 68%;
+    }
+
+    .textos-hero h1{
+        text-align: center;
+        font-size: 50px;
+    }
+    /* estilos generales */
+    .titulo{
+        font-size: 35px;
+    }
+
+    .titulo.left{
+        text-align: center;
+    }
+
+    .info p{
+        text-align: center;
+    }
+
+    /* section */
+    .website{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .website img{
+        width: 100%;
+    }
+
+    .website .contenedor-textos-main{
+        width: 100%;
+    }
+
+    /* Cards */
+
+    .card{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+     /* last */
+
+    .last-section img{
+        width: 98%;
+    }
+
+    .last-section .contenedor-textos-main{
+        width: 98%;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media screen and (max-width:400px){
+    .titulo,
+    .textos-hero h1{
+        font-size: 30px;
+    }
+
+    .textos-hero p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .card{
+        height: 380px;
+    }
+
+    .website .contenedor-textos-main{
+        margin-bottom: 30px;
+    }
+
+    .galeria-cont>img{
+        width: 97%;
+    }
+
+    .imagengatito img {
+        display: none;
+    }
+
+    .nav_landing p{
+        display: none;
+    } 
+}
+}

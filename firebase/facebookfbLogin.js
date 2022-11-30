@@ -1,0 +1,1 @@
+const script= <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0&appId=448494250700509&autoLogAppEvents=1" nonce="TnseseNz"></script>

@@ -1,0 +1,33 @@
+<div class="login_todo">
+    <div class="login-container">
+        <img class="image-container" src="img/violeta.jpg" alt="">
+        <div class="login-info-container">
+            <h1 class="title">Inicia sesión:</h1>
+            <form class="inputs-container" method="post" action="/login" >
+                {{#if error}} 
+                <p class="text-center mt-2 bg-danger p-2 fw-bold text-white">{{error}}</p>
+                {{/if}}
+                <input class="input" type="text" placeholder="Usuario" name="email">
+                <input class="input" type="text" placeholder="Contraseña" name="pass">
+                <p><span class="span"> Olvidaste tu Contraseña</span></p>
+                <button class="btn">login</button>
+                <p>¿Todavia no tenes una cuenta? <a class="span" href="/register">Hace click acá</a></p>
+            </form>
+            <p>O tambien por: </p>
+            <div class="social-login">
+                <div class="social-login-element">
+                    <a href="{{googleOAuthURL}}">
+                    <img src="img/google.svg" alt=""> 
+                    <span>Google</span>
+                    </a>
+                </div>
+                <div class="social-login-element">
+                    <div id="fb-root">
+                        <div class="fb-login-button" data-width="150px" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
+                        </div>
+                </div>
+            </div>            
+        </div>          
+    </div>
+</div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0&appId=448494250700509&autoLogAppEvents=1" nonce="TnseseNz"></script>
