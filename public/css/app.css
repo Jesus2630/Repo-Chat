@@ -96,12 +96,16 @@
   font-family: var(--bs-body-font-family);
 }
 
+.form-landing {
+  z-index: 100;
+}
+
 .imagengatito {
   position: absolute;
   top: 160px;
   left: 650px;
   width: 78%;
-  z-index: 1;
+  z-index: 0;
 }
 .imagengatito img {
   width: 74%;
