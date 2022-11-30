@@ -10,21 +10,23 @@ var formEnviar = $('#formEnviar');
 var txtMensaje = $('#txtMensaje');
 var divChatbox = $('#divChatbox');
 var usuario = $('#usuario');
+var mostrarsala = $('#sala');
+var usuariosLeft = $('#usuariosLeft');
 
 
-//Muestro el nombre del usuario
-usuario.html(nombre)
+//Muestro el nombre del usuario y sala
+usuario.html(nombre);
+mostrarsala.html(sala);
+
 
 
 function renderizarUsuarios(personas) { // [{},{},{}]
 
     console.log(personas);
     
-    
-
     var html = '';
 
-    
+    //Listado de usuarios columna derecha
 
     for (var i = 0; i < personas.length; i++) {
 
@@ -33,10 +35,20 @@ function renderizarUsuarios(personas) { // [{},{},{}]
         html += '</li>';
     }
 
+    //Listado de usuarios columna izquierda
+
+    var htmleft = '';
+
+    for (var i = 0; i < personas.length; i++) {
+
+        htmleft += '<li>';
+        htmleft += '    <p> <i class="bx bx-user" style="color:#17901e"></i> <span>' + personas[i].nombre + '</span></p>';
+        htmleft += '</li>';
+    }
+
+    usuariosLeft.html(htmleft);
     divUsuarios.html(html);
-
 }
-
 
 function renderizarMensajes(mensaje, yo) {
 
@@ -46,32 +58,34 @@ function renderizarMensajes(mensaje, yo) {
 
     var adminClass = 'info';
     if (mensaje.nombre === 'Administrador') {
-        adminClass = 'danger';
+        html += '<li class="reverse fs-7">';
+        html += '    <div class="mensaje d-flex">';
+        html += '        <p class="text-secondary">' + mensaje.nombre + '  :  ' + '</p>';
+        html += '        <div class="box bg-light-inverse ms-2">' + mensaje.mensaje + '</div>';
+        html += '    <div class="chat-time ms-auto">' + hora + '</div>';
+        html += '    </div>';
+        html += '</li>';
     }
 
     if (yo) {
         html += '<li class="reverse">';
-        html += '    <div class="chat-content">';
-        html += '        <h5>' + mensaje.nombre + '</h5>';
-        html += '        <div class="box bg-light-inverse">' + mensaje.mensaje + '</div>';
+        html += '    <div class="mensaje d-flex">';
+        html += '        <h5 class="fw-bold">' + mensaje.nombre + '  :  ' + '</h5>';
+        html += '        <div class="box bg-light-inverse ms-2">' + mensaje.mensaje + '</div>';
+        html += '    <div class="chat-time ms-auto">' + hora + '</div>';
         html += '    </div>';
-        html += '    <div class="chat-img"><img src="assets/images/users/5.jpg" alt="user" /></div>';
-        html += '    <div class="chat-time">' + hora + '</div>';
         html += '</li>';
 
-    } else {
+    } else if(mensaje.nombre != 'Administrador') {
 
         html += '<li class="animated fadeIn">';
 
-        if (mensaje.nombre !== 'Administrador') {
-            html += '    <div class="chat-img"><img src="assets/images/users/1.jpg" alt="user" /></div>';
-        }
 
-        html += '    <div class="chat-content">';
-        html += '        <h5>' + mensaje.nombre + '</h5>';
-        html += '        <div class="box bg-light-' + adminClass + '">' + mensaje.mensaje + '</div>';
+        html += '    <div class="mensaje d-flex">';
+        html += '        <h5 class="fw-bold">' + mensaje.nombre + '  :  ' + '</h5>';
+        html += '        <div class="box bg-light-inverse ms-2">' + mensaje.mensaje + '</div>';
+        html += '       <div class="chat-time ms-auto">' + hora + '</div>';
         html += '    </div>';
-        html += '    <div class="chat-time">' + hora + '</div>';
         html += '</li>';
 
     }
@@ -128,6 +142,4 @@ formEnviar.on('submit', function(e) {
         renderizarMensajes(mensaje, true);
         scrollBottom();
     });
-
-
 });

@@ -28,15 +28,16 @@
                     <h6>Canales</h6>
                 </span>
                 <span class="canal"><i class='bx bx-hash'></i>
-                    <h8>general</h8>
+                    <h8>General</h8>
                 </span>
-                <span class="canal"><i class='bx bx-hash'></i>
-                    <h8>Lorem</h8>
-                </span>
+                {{!-- Chats --}}
                 <span class="desplegable"><i class='bx bxs-chevron-down'></i>
                     <h6>Chats</h6>
                 </span>
-                <div class="chat_privado"><span class="status_canal"></span>
+                <ul id="usuariosLeft">
+                    
+                </ul>
+                {{!-- <div class="chat_privado"><span class="status_canal"></span>
                     <h8>Lorem</h8>
                 </div>
                 <div class="chat_privado"><span class="status_canal"></span>
@@ -44,12 +45,14 @@
                 </div>
                 <div class="chat_privado"><span class="status_canal"></span>
                     <h8>Mana</h8>
-                </div>
+                </div> --}}
             </div>
         </div>
 
         <div class="chat-area w-75">
-            <div class="canal_name bg-light"><i class='bx bx-hash'></i><h3>general</h3></div>
+            <div class="canal_name bg-light"><i class='bx bx-hash'></i>
+                <h3 id="sala"></h3>
+            </div>
             <ul class="chat_estructura p-2 relleno bg-light" id="divChatbox">
             </ul>
             <div class="container_emojis" id="container_emojis">
@@ -104,11 +107,11 @@
             </div>
         </div>
 
-        <div class="lista_de_usuarios">
+        <div class="lista_de_usuarios px-4">
             <div class="users_online">
                 <h4>Usuarios online</h4>
             </div>
-            <ul class="chatonline style-none" id="divUsuarios"> </ul>
+            <ul class="chatonline px-2 style-none" id="divUsuarios"> </ul>
         </div>
     </div>
 

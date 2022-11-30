@@ -25,7 +25,14 @@
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Sala de chat" name="sala"> </div>
+                                <select class="form-control" name="sala">
+                                    <option value="General">General</option>
+                                    <option value="Juegos">Juegos</option>
+                                    <option value="Estudio">Estudio</option>
+                                </select>
+
+                                {{!-- <input class="form-control" type="text" required="" placeholder="Sala de chat" name="sala">  --}}
+                            </div>
                         </div>
 
                         <div class="form-group text-center">

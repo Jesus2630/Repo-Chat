@@ -32,14 +32,6 @@ socket.on('disconnect', function() {
 });
 
 
-// Enviar información
-// socket.emit('crearMensaje', {
-//     nombre: 'Fernando',
-//     mensaje: 'Hola Mundo'
-// }, function(resp) {
-//     console.log('respuesta server: ', resp);
-// });
-
 // Escuchar información
 socket.on('crearMensaje', function(mensaje) {
     // console.log('Servidor:', mensaje);
@@ -47,8 +39,7 @@ socket.on('crearMensaje', function(mensaje) {
     scrollBottom();
 });
 
-// Escuchar cambios de usuarios
-// cuando un usuario entra o sale del chat
+
 socket.on('listaPersona', function(personas) {
     renderizarUsuarios(personas);
 });
