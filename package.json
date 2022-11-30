@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
+    "start":"node",
     "dev": "sass --watch public/scss/app.scss public/css/app.css"
   },
   "keywords": [],

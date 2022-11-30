@@ -2,7 +2,7 @@
 const cajaEmojis = document.querySelector("#container_emojis");
 const emojis = document.querySelectorAll("#emoji");
 const botonEmoji = document.querySelector("#botonEmoji");
-const input = document.querySelector('#cuadroMensaje');
+const input = document.querySelector('#txtMensaje');
 //Variables stickers
 const cajaStickers = document.querySelector("#container_stickers");
 const stickers = document.querySelectorAll("#sticker");
