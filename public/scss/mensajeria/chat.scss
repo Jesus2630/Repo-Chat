@@ -421,6 +421,8 @@
         margin-top: 3.5rem;
         padding-bottom: 2.2rem;
         cursor: pointer;
+        border-top: 1px solid rgba(61, 61, 61, 0.425);
+        padding-top: 0.5rem;
     }
     
     #icon_emoji{
@@ -434,11 +436,33 @@
         left: 50px;
     }
 
+    #icon_emoji_2{
+        position: absolute;
+        right: 50px;
+    }
+
+    #icon_sticker_2{
+        position: absolute;
+        padding-right: 1rem;
+        left: 50px;
+    }
+    
+        .opciones_activo{
+            color: #7c4cc3;
+        }
+ 
+        .opciones_activo_2{
+            position: absolute;
+            color: #7c4cc3;
+            padding-right: 1rem;
+            left: 50px;
+        }
 
     .container_stickers{
         position: absolute;
         display: none;
-        grid-template-columns: 1fr 1fr;
+        width: 279.69px;
+        height: 324.19px;
         gap: 10px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
         padding: 5px 10px;
@@ -447,13 +471,29 @@
         background-color: white;
 
         span#sticker img{
-            width: 10%;
+            width: 40%;
             cursor: pointer;
         }
     };    
+    
+
+    .divstickers{
+        overflow-y: auto;
+        height: 271px;
+    }
 
     .open_container_stickers{
-        display: inline-grid;
+        display: block;
+    }
+
+    .opciones_2{
+        font-size: 2rem;
+        display: flex;
+        position: relative;
+        padding-bottom: 2.2rem;
+        cursor: pointer;
+        border-top: 1px solid rgba(61, 61, 61, 0.425);
+        padding-top: 0.5rem;
     }
 
     button#btn-enviar {

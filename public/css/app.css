@@ -1156,6 +1156,8 @@ body {
   margin-top: 3.5rem;
   padding-bottom: 2.2rem;
   cursor: pointer;
+  border-top: 1px solid rgba(61, 61, 61, 0.425);
+  padding-top: 0.5rem;
 }
 .chat-area #icon_emoji {
   position: absolute;
@@ -1166,10 +1168,29 @@ body {
   padding-right: 1rem;
   left: 50px;
 }
+.chat-area #icon_emoji_2 {
+  position: absolute;
+  right: 50px;
+}
+.chat-area #icon_sticker_2 {
+  position: absolute;
+  padding-right: 1rem;
+  left: 50px;
+}
+.chat-area .opciones_activo {
+  color: #7c4cc3;
+}
+.chat-area .opciones_activo_2 {
+  position: absolute;
+  color: #7c4cc3;
+  padding-right: 1rem;
+  left: 50px;
+}
 .chat-area .container_stickers {
   position: absolute;
   display: none;
-  grid-template-columns: 1fr 1fr;
+  width: 279.69px;
+  height: 324.19px;
   gap: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.39);
   padding: 5px 10px;
@@ -1178,11 +1199,24 @@ body {
   background-color: white;
 }
 .chat-area .container_stickers span#sticker img {
-  width: 10%;
+  width: 40%;
   cursor: pointer;
 }
+.chat-area .divstickers {
+  overflow-y: auto;
+  height: 271px;
+}
 .chat-area .open_container_stickers {
-  display: inline-grid;
+  display: block;
+}
+.chat-area .opciones_2 {
+  font-size: 2rem;
+  display: flex;
+  position: relative;
+  padding-bottom: 2.2rem;
+  cursor: pointer;
+  border-top: 1px solid rgba(61, 61, 61, 0.425);
+  padding-top: 0.5rem;
 }
 .chat-area button#btn-enviar {
   width: auto;
