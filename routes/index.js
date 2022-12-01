@@ -1,7 +1,6 @@
 const { Router, request, response, urlencoded } = require('express');
 const router = Router();
-const express = require('express')
-const app = express();
+const express = require('express');
 
 //?Controllers
 const { chatController} = require('../controllers/chatControllers');

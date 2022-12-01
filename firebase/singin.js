@@ -29,7 +29,7 @@ const ingresoUsuario = async(req = request,res = response)=>{
 
 
         else{
-          res.redirect('signInUser')
+          res.render('signInUser')
         }
       } 
   } catch (error) {
