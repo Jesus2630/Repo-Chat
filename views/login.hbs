@@ -7,8 +7,8 @@
                 {{#if error}} 
                 <p class="text-center mt-2 bg-danger p-2 fw-bold text-white">{{error}}</p>
                 {{/if}}
-                <input class="input" type="text" placeholder="Usuario" name="email">
-                <input class="input" type="text" placeholder="Contraseña" name="pass">
+                <input class="input" type="email" placeholder="Usuario" name="email" required>
+                <input class="input" type="password" placeholder="Contraseña" name="pass" required>
                 <p><span class="span"> Olvidaste tu Contraseña</span></p>
                 <button class="btn">login</button>
                 <p>¿Todavia no tenes una cuenta? <a class="span" href="/register">Hace click acá</a></p>
